@@ -18,57 +18,81 @@
 
     <!-- STARTs Main Header -->
     <div class="mainHeader">  
-        <div class="headerLogo">
+        <div class="headerLogo"> <!-- STARTs Header Logo --> 
             <h1><span>Your</span>App&trade;</h1>
-        </div>
-        <div class="headerNav">
-            <div class="notifications">
+        </div> <!-- ENDs Header Logo --> 
+        <div class="headerNav"> <!-- STARTs Header Nav --> 
+            <div class="notifications"> <!-- STARTs Notifications --> 
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve">
                     <path class="iconFill" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
-                    <circle cx="25" cy="6" r="5" fill="lightgreen"/>
+                    <circle cx="25" cy="6" r="5" fill="red"/>
                 </svg>
-            </div>
-            <div class="divider">
-            </div>
-            <div class="profile">
+            </div> <!-- ENDs Notifications --> 
+            <div class="divider"> <!-- STARTs Divider--> 
+            </div> <!-- ENDs Divider --> 
+            <div class="profile"> <!-- STARTs Profile --> 
                 <img src="images/member-1.jpg" alt="Profile image">
-            </div>
-            <div class="name">Barbara Smok</div>
-        </div>
+            </div> <!-- ENDs Profile --> 
+            <!-- STARTs Name --> 
+            <div class="name">Bárbara Smok</div> <!-- ENDs Name --> 
+        </div> <!-- ENDs Header Nav --> 
     </div> <!-- ENDs Main Header -->  
 
 
     <!-- STARTs Main Nav -->
     <div class="mainNav">
-            
+        <img src="icons/icon-dashboard.svg" alt="dashboard">
+        <img src="icons/icon-members.svg" alt="members">
+        <img src="icons/icon-visits.svg" alt="visits">
+        <img src="icons/icon-settings.svg" alt="settings">
     </div> <!-- ENDs Main Nav -->
     
 
     <!-- STARTs Main Container -->    
     <main class="mainContainer">
-            
+        <div class="mainTab"> <!-- STARTs Main Tab --> 
+            <h2>Dashboard</h2>
+            <div class="mainSearch">
+                <input type="search" placeholder="Search">
+            </div>
+        </div> <!-- ENDs Main Tab -->    
+
+
         <!-- STARTs Alert Banner --> 
-        <div class="alertBanner">
-            
+        <div class="alertBanner" id="alert">    
         </div> <!-- ENDs Alert Banner --> 
 
 
         <!-- STARTs Main Traffic Stats --> 
-        <div class="mainTraffic">
-            
-        </div> <!-- ENDs Main Traffic Stats --> 
+        <section class="mainTraffic">
+            <div class="trafficHeader"> <!-- STARTs Traffic Header --> 
+                <h3>Traffic</h3>
+                <ul class="trafficNav">
+                    <li class="trafficNavLink">Hourly</li>
+                    <li class="trafficNavLink">Daily</li>
+                    <li class="trafficNavLink">Weekly</li>
+                    <li class="trafficNavLink">Monthly</li>
+                </ul>
+            </div> <!-- ENDs Traffic Header --> 
+            <div class="widgetFull"> <!-- STARTs Widget Full --> 
+                <canvas id="trafficChart"></canvas>
+            </div> <!-- ENDs Widget Full --> 
+        </section> <!-- ENDs Main Traffic Stats --> 
 
 
         <!-- STARTs Daily Traffic Stats --> 
-        <div class="dailyTraffic">
+        <section class="dailyTraffic">
             
-        </div> <!-- ENDs Daily Traffic Stats -->
+
+
+            
+        </section> <!-- ENDs Daily Traffic Stats -->
         
         
         <!-- STARTs Mobile Chart Stats --> 
-        <div class="mobileChart">
+        <section class="mobileChart">
             
-        </div> <!-- ENDs Mobile Chart Stats --> 
+        </section> <!-- ENDs Mobile Chart Stats --> 
 
         <!-- STARTs Social Stats --> 
         <div class="socialStats">

@@ -15,9 +15,9 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas:
-    "header"
-    "nav"
-    "main";
+    "mainHeader"
+    "mainNav"
+    "mainContainer";
 }
 
 /* STARTs Main Header*/
@@ -25,7 +25,7 @@ body {
     align-items: center;
     background-color: #09aeb9;
     display: flex;
-    grid-area: header;
+    grid-area: mainHeader;
     justify-content: space-between;
     padding: 0 20px;
 }
@@ -55,7 +55,7 @@ body {
 }
 
 .mainHeader .headerNav .divider {
-    background-color: rgba(0,0,0,0.2);
+    background-color: #FFF;
     display: block;
     height: 50px;
     margin: 0 20px;
@@ -92,24 +92,76 @@ body {
 .notifications:hover {
     transform: rotate(360deg);
 }
-
 /* ENDs Main Header*/
 
+
+/* STARTs Main Nav*/
 .mainNav {
     background-color: #b38fc2;
     display: flex;
-    grid-area: nav; 
+    grid-area: mainNav; 
     justify-content: center;
 }
 
-.mainContainer {
-    grid-area: main; 
+.mainNav img {
+    padding: 10px;
+    height: 50px;
+    width: 60px;
 }
+/* ENDs Main Nav*/
+
+
+/* STARTs Main Container*/
+.mainContainer {
+    grid-area: mainContainer; 
+}
+
+.mainTab {
+    justify-content: space-between;
+    display: flex;
+}
+
+.main h2 {
+    color: #09aeb9;
+    font-size: 25px;
+    font-weight: 400;
+    height: 30px;
+    line-height: 30px;
+    padding: 25px 25px;
+}
+
+.mainContainer .mainSearch  {
+    align-items: center;
+    background-color: rgba(214, 210, 210, 0.651);
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
+    padding-right: 20px;
+    width: 400%;
+}
+
+.mainContainer .mainSearch input {
+    appearance: none;
+    border: 0;
+    border: 1px solid rgb(116,116,116);
+    border-radius: 4px;
+    display: block;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 15px;
+    width: 40%;
+}
+/* ENDs Main Container*/
+
+
 
 .alertBanner {
     display: flex;
 }
 
+
+
+/* STARTs Main Traffic*/
 .mainTraffic {
     color: rgb(119, 118, 118);
     display: block;
@@ -120,6 +172,27 @@ body {
     padding: 15px 25px;
     border-bottom: 1px solid lightgray;
 }
+
+.trafficHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.mainTraffic h3 {
+    font-size: 20px;
+}
+
+.trafficNav {
+    display: flex;
+}
+
+.trafficNavLink {
+    padding-right: 20px;
+}
+/* ENDs Main Traffic*/
+
+
 
 .dailyTraffic {
     align-items: center;
@@ -166,10 +239,10 @@ body {
 
 @media (min-width: 768px) {
     .mainHeader {
-        rid-template-columns: 55px 1fr;
+        grid-template-columns: 55px 1fr;
         grid-template-areas:
-        "header header"
-        "nav main";
+        "mainHeader mainHeader"
+        "mainNav mainContainer";
     }
 
     .mainNav {
@@ -191,6 +264,53 @@ body {
         display: inline-block;
     }
 
+    .mainTraffic, 
+    .socialStats {
+        grid-column: 1 / span 2;
+    }
 
+    .dailyTraffic, 
+    .newMembers, 
+    .messageUserWidget {
+        grid-column: 1 / span 1;
+    }
+
+    .mobileChart, 
+    .recentActivityContainer, 
+    .settingsContainer {
+        grid-column: 2 / span 1;
+    }
+
+    .socialStats {
+        flex: 1;
+        justify-content: space-evenly;
+    }
+
+    .socialFacebookStats,
+    .socialTwitterStats,
+    .socialGoogleStats {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 30px;
+    }
+
+    .newMembers,
+    .recentActivityContainer,
+    .messageUserWidget,
+    .settingsContainer {
+        flex: 1;
+    }
+
+    .settingsContainer {
+        border-left: 1px solid rgb(144, 142, 152);
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .socialStats {
+        display: flex;
+    }
 
 }
