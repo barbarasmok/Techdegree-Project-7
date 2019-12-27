@@ -23,7 +23,7 @@ body {
 /* STARTs Main Header*/
 .mainHeader {
     align-items: center;
-    background-color: #908e9e;
+    background-color: #09aeb9;
     display: flex;
     grid-area: header;
     justify-content: space-between;
