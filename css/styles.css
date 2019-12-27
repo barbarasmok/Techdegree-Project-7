@@ -64,3 +64,48 @@ body {
     border-top: 1px solid lightgray;
     padding: 20px 20px;
 }
+
+.newMembersContainer, 
+.recentActivityContainer {
+    border-right: 1px solid rgb(116,116,116);
+    border-bottom: 1px solid rgb(116,116,116);
+    color: rgb(119, 118, 118);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.messageUserWidget {    
+    border-bottom: 1px solid rgb(116,116,116);
+    flex-direction: column;
+}
+
+.settingsContainer {
+    color: rgb(119, 118, 118);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 30px; 
+    padding-bottom: 35px;
+}
+
+@media (min-width: 768px) {
+    .mainHeader {
+        rid-template-columns: 55px 1fr;
+        grid-template-areas:
+        "header header"
+        "nav main";
+    }
+
+    .mainNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .mainContainer {
+        grid-template-columns: 50%;
+    }
+
+
+}
