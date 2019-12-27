@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gupter', serif;
+}
+
+html { 
+    height: 100%; 
+}
+body { 
+    min-height: 100%; 
+}
+
+.mainHeader {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main";
+}
+
+.mainNav {
+    background-color: #b38fc2;
+    display: flex;
+    grid-area: nav; 
+    justify-content: center;
+}
+
+.mainContainer {
+    grid-area: main; 
+}
+
+.alertBanner {
+    display: flex;
+}
+
+.mainTraffic {
+    color: rgb(119, 118, 118);
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    justify-content: space-between;
+    line-height: 30px;
+    padding: 15px 25px;
+    border-bottom: 1px solid lightgray;
+}
+
+.dailyTraffic {
+    align-items: center;
+    color: rgb(119, 118, 118);
+    padding-bottom: 30px;
+}
+
+.mobileChart {
+    align-items: center;
+    color: rgb(119, 118, 118);
+    padding-bottom: 30px;
+    border-top: 1px solid lightgray;
+}
+
+.socialStats {
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    padding: 20px 20px;
+}
