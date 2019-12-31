@@ -237,6 +237,25 @@ body {
     padding-bottom: 35px;
 }
 
+/* Butttons */
+.btnNeutral, 
+.btnPositive {
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  padding: 16px 0;
+  display: block;
+  width: 100%;
+  background: #7477BF;
+}
+
+
 @media (min-width: 768px) {
     .mainHeader {
         grid-template-columns: 55px 1fr;
@@ -312,5 +331,32 @@ body {
     .socialStats {
         display: flex;
     }
+
+    .messageUserWidget,
+    .settingsContainer, 
+    .newMembers,
+    .recentActivity, 
+    .dailyTraffic,
+    .mobileChart {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+    }
+
+    .settingsField, 
+    .messageArea, 
+    .messageField, 
+    .mainSearch {
+        width: 100%;
+        font-size: 14px;
+        outline: 0;
+        border: none;
+        border: 1px solid #dadada;
+        border-radius: 5px;
+        color: #818181;
+        background: #FBFBFB;
+        padding: 10.5px 18px;
+        display: block;
+}
 
 }
