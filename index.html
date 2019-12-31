@@ -281,7 +281,37 @@
 
         <!-- STARTs Settings Container --> 
         <section class="settingsContainer" id="settings">
-            
+            <div class="container">
+                <h3 class="subheadline">Settings</h3>
+                <div class="wrapper">
+                    <div class="flexRow">
+                        <span class="toggleLabel">Send Email Notifications</span>
+                        <label class="toggle">
+                            <input class="toggleCheckbox" id="emailSetting" type="checkbox">
+                            <div class="toggleSwitch"></div>
+                        </label>
+                    </div> <!-- ENDs Flex Row -->  
+              
+                    <div class="flexRow">
+                        <span class="toggleLabel">Set Profile to Public</span>
+                        <label class="toggle">
+                            <input class="toggleCheckbox" id="profileSetting" type="checkbox">
+                            <div class="toggleSwitch"></div>
+                        </label>
+                    </div> <!-- ENDs Flex Row -->  
+
+                    <select class="settingsField" id="timeZone">
+                        <option disabled selected>Select Timezone</option>
+                        <option>Eastern</option>
+                        <option>Central</option>
+                        <option>Pacific</option>
+                    </select>
+              
+                    <button class="btnPositive" id="save">Save</button>
+                    <button class="btnNeutral" id="cancel">Cancel</button>
+
+                </div> <!-- ENDs Wrapper -->  
+            </div> <!-- ENDs Container -->         
         </section> <!-- ENDs Settings Container --> 
 
 
@@ -289,7 +319,13 @@
     </main> <!-- ENDs Main Container -->
 </div> <!-- ENDs Main Grid Container -->  
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="js/plugins/ion-sound/ion.sound.min.js"></script>
+<script src="js/variables.js"></script>
+<script src="js/data.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
