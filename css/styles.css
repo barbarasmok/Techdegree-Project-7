@@ -162,7 +162,7 @@ body {
 
 
 /* STARTs Main Traffic*/
-#mainTraffic {
+.mainTraffic {
     color: rgb(119, 118, 118);
     display: block;
     font-size: 15px;
@@ -194,27 +194,27 @@ body {
 
 
 
-#dailyTraffic {
+.dailyTraffic {
     align-items: center;
     color: rgb(119, 118, 118);
     padding-bottom: 30px;
 }
 
-#mobileChart {
+.mobileChart {
     align-items: center;
     color: rgb(119, 118, 118);
     padding-bottom: 30px;
     border-top: 1px solid lightgray;
 }
 
-#socialStats {
+.socialStats {
     border-bottom: 1px solid lightgray;
     border-top: 1px solid lightgray;
     padding: 20px 20px;
 }
 
-#newMembersContainer, 
-#recentActivityContainer {
+.newMembersContainer, 
+.recentActivityContainer {
     border-right: 1px solid rgb(116,116,116);
     border-bottom: 1px solid rgb(116,116,116);
     color: rgb(119, 118, 118);
@@ -223,12 +223,12 @@ body {
     justify-content: space-between;
 }
 
-#messageUserWidget {    
+.messageUserWidget {    
     border-bottom: 1px solid rgb(116,116,116);
     flex-direction: column;
 }
 
-#settingsContainer {
+.settingsContainer {
     color: rgb(119, 118, 118);
     display: flex;
     flex-direction: column;
@@ -255,33 +255,33 @@ body {
         grid-template-columns: 50%;
     }
 
-    #dailyTraffic,
-    #mobileChart,
-    #newMembersContainer,
-    #recentActivityContainer,
-    #messageUserWidget,
-    #settingsContainer {
+    .dailyTraffic,
+    .mobileChart,
+    .newMembersContainer,
+    .recentActivityContainer,
+    .messageUserWidget,
+    .settingsContainer {
         display: inline-block;
     }
 
-    #mainTraffic, 
-    #socialStats {
+    .mainTraffic, 
+    .socialStats {
         grid-column: 1 / span 2;
     }
 
-    #dailyTraffic, 
-    #newMembers, 
-    #messageUserWidget {
+    .dailyTraffic, 
+    .newMembers, 
+    .messageUserWidget {
         grid-column: 1 / span 1;
     }
 
-    #mobileChart, 
-    #recentActivityContainer, 
-    #settingsContainer {
+    .mobileChart, 
+    .recentActivityContainer, 
+    .settingsContainer {
         grid-column: 2 / span 1;
     }
 
-    #socialStats {
+    .socialStats {
         flex: 1;
         justify-content: space-evenly;
     }
@@ -296,13 +296,13 @@ body {
     }
 
     .newMembers,
-    #recentActivityContainer,
-    #messageUserWidget,
-    #settingsContainer {
+    .recentActivityContainer,
+    .messageUserWidget,
+    .settingsContainer {
         flex: 1;
     }
 
-    #settingsContainer {
+    .settingsContainer {
         border-left: 1px solid rgb(144, 142, 152);
     }
 
