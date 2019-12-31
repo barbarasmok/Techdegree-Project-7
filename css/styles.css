@@ -357,6 +357,68 @@ body {
         background: #FBFBFB;
         padding: 10.5px 18px;
         display: block;
-}
+    }
 
+    .settingsField {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: url("../../icons/icon-angle-down.svg") no-repeat right #FBFBFB;
+    }
+
+    .toggleSwitch {
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 16px;
+        position: relative;
+        display: inline-block;
+        width: 90px;
+        height: 32px;
+        vertical-align: middle;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 2px solid #CFCFD0;
+        background: #B2B2B2;
+        transition: background 0.4s ease-out;
+    }
+
+
+    .toggleSwitch:before, 
+    .toggleSwitch:after {
+        content: "";
+        color: #fff;
+    }
+
+    .toggleSwitch:after {
+        content: "off";
+        position: relative;
+        top: 6.2px;
+        left: 50px;
+    }
+
+    .toggleSwitch:before {
+        display: block;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #CFCFD0;
+        top: 2px;
+        left: 3.5px;
+        transition: left 0.25s;
+    }
+
+    .toggleCheckbox:checked + .toggleSwitch {
+        background: #7477BF;
+    }
+
+    .toggleCheckbox:checked + .toggleSwitch:before {
+        left: 57.5px;
+    }
+
+    .toggleCheckbox:checked + .toggleSwitch:after {
+        content: "on";
+        left: 9.5px;
+    }
 }
