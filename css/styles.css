@@ -127,6 +127,18 @@ body {
 .notifications:hover {
     transform: rotate(360deg);
 }
+
+.notificationLight {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    background: #85DB80;
+    color: #85DB80;
+    width: 7px;
+    height: 7px;
+    border-radius: 100px;
+    visibility: hidden;
+}
 /* ENDs Main Header*/
 
 
@@ -194,6 +206,17 @@ v    justify-content: center;
 
 .navIcon:hover {
     transform: rotate(30deg);
+}
+
+.navIcon {
+    width: 35px;
+    height: 35px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.navIcon:hover, .mainNavLinkSelected .navIcon {
+    opacity: 1;
 }
 
 /* ENDs Main Nav*/
@@ -287,7 +310,7 @@ v    justify-content: center;
 /* ENDs Main Traffic*/
 
 
-
+/* STARTs Daily Traffic*/
 .dailyTraffic {
     align-items: center;
     color: rgb(119, 118, 118);
@@ -301,6 +324,7 @@ v    justify-content: center;
   margin-top: 20px;
 }
 
+/* STARTs Mobile Chart*/
 .mobileChart {
     align-items: center;
     color: rgb(119, 118, 118);
@@ -308,12 +332,14 @@ v    justify-content: center;
     border-top: 1px solid lightgray;
 }
 
+/* STARTs Social Stats*/
 .socialStats {
     border-bottom: 1px solid lightgray;
     border-top: 1px solid lightgray;
     padding: 20px 20px;
 }
 
+/* STARTs New Members + Recent Activity*/
 .newMembersContainer, 
 .recentActivityContainer {
     border-right: 1px solid rgb(116,116,116);
@@ -324,11 +350,18 @@ v    justify-content: center;
     justify-content: space-between;
 }
 
+.activityToggle {
+    cursor: pointer;
+    width: 15px;
+}
+
+/* STARTs Message User Widget*/
 .messageUserWidget {    
     border-bottom: 1px solid rgb(116,116,116);
     flex-direction: column;
 }
 
+/* STARTs Settings Container*/
 .settingsContainer {
     color: rgb(119, 118, 118);
     display: flex;
