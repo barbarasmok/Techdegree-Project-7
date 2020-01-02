@@ -183,6 +183,19 @@ v    justify-content: center;
     opacity: 1;
 }
 
+.navIcon {
+    cursor: pointer;
+    width: 21px;
+    transition: transform 0.5s;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.navIcon:hover {
+    transform: rotate(30deg);
+}
+
 /* ENDs Main Nav*/
 
 
@@ -265,6 +278,12 @@ v    justify-content: center;
 .trafficNavLink {
     padding-right: 20px;
 }
+
+#trafficChart {
+    display: block;
+    max-width: 100%;
+    margin-top: 24px;
+}
 /* ENDs Main Traffic*/
 
 
@@ -273,6 +292,13 @@ v    justify-content: center;
     align-items: center;
     color: rgb(119, 118, 118);
     padding-bottom: 30px;
+}
+
+#dailyTrafficChart,
+#devicesChart {
+  display: block;
+  max-width: 100%;
+  margin-top: 20px;
 }
 
 .mobileChart {
@@ -335,6 +361,10 @@ v    justify-content: center;
 @media (min-width: 480px) {
     .notifications {
       width: 350px;
+    }
+
+    #trafficChart {
+        margin-top: 10px;
     }
 }
 
