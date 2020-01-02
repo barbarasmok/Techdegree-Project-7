@@ -4,6 +4,7 @@ const notificationLight = document.querySelector('.notificationLight');
 const notificationsList = document.querySelector('.notifications');
 const nav = document.querySelector('.mainNav');
 const navLinks = nav.querySelectorAll('.mainNavLink');
+const main = document.querySelector('mainContainer');
 const searchBox = document.querySelector('.mainSearch');
 const alertMessage = document.getElementById('alertMessage');
 const trafficNav = document.querySelector('.trafficNav');
