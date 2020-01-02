@@ -33,6 +33,11 @@ body {
     grid-area: mainContainer;
 }
 
+.container {
+    padding: 0 0.6em;
+}
+
+
 /* STARTs Main Header*/
 .mainHeader {
     text-align: center;
@@ -74,6 +79,19 @@ body {
 
 .mainHeader .headerLogo h1 span {
     font-weight: 700;
+}
+
+.headerLogo {
+    cursor: pointer;
+    width: 21px;
+    transition: transform 0.5s;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.headerLogo:hover {
+    transform: rotate(30deg);
 }
 
 
@@ -193,19 +211,6 @@ body {
 .mainNavLinkSelected::before {
     border-bottom-color: #85DB80;
     opacity: 1;
-}
-
-.navIcon {
-    cursor: pointer;
-    width: 21px;
-    transition: transform 0.5s;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
-
-.navIcon:hover {
-    transform: rotate(30deg);
 }
 
 .navIcon {
