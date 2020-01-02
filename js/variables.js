@@ -1,0 +1,17 @@
+const searchBox = document.querySelector('.mainSearch');
+const alertMessage = document.getElementById('alertMessage');
+const trafficNav = document.querySelector('.trafficNav');
+const trafficLinks = trafficNav.querySelectorAll('.trafficNavLink');
+const trafficCanvas = document.getElementById('trafficChart');
+const dailyTrafficCanvas = document.getElementById('dailyTrafficChart');
+const devicesTrafficCanvas = document.getElementById('devicesChart');
+const messageForm = document.querySelector('.messageForm');
+const userField = document.getElementById('userField');
+const messageField = document.getElementById('messageField');
+const sendButton = document.querySelector('.btnPositive');
+const settingsWrapper = document.querySelector('.settings .wrapper');
+const emailSettingsCheckBox = document.getElementById('emailSetting');
+const profileSettingsCheckBox = document.getElementById('profileSetting');
+const timezoneSelect = document.getElementById('timeZone');
+const saveSettingsBtn = document.getElementById('save');
+const cancelSettingsBtn = document.getElementById('cancel');
