@@ -147,7 +147,7 @@ body {
     background-color: #b38fc2;
     display: flex;
     padding: 35px 0;
-v    justify-content: center;
+   justify-content: center;
 }
 
 .mainNav img {
@@ -354,6 +354,19 @@ v    justify-content: center;
     cursor: pointer;
     width: 15px;
 }
+
+.profileImage {
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+  
+.feed {
+    width: 38px;
+    height: 38px;
+}
+
 
 /* STARTs Message User Widget*/
 .messageUserWidget {    
