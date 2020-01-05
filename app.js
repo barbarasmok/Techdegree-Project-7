@@ -61,9 +61,7 @@ const monthlyLabels = [
     "NOV",
     "DEC"
 ];
-
 // STARTs Set up Traffic Chart Functions //
-
 const updateChart = (type, labels, data) => {
     // code to be executed
     if (labels === 'hourly') {
@@ -103,45 +101,6 @@ trafficNav.addEventListener('click', e => {
 });
 
 
-
-const updateChart = (labels, data) => {
-    // code to be executed
-    if (labels === 'hourly') {
-        trafficData.labels = hourlyLabels;
-        trafficData.datasets[0] = hourlyData;
-      } else if (labels === 'daily') {
-        trafficData.labels = dailyLabels;
-        trafficData.datasets[0] = dailyData;
-      } else if (labels === 'weekly') {
-        trafficData.labels = weeklyLabels;
-        trafficData.datasets[0] = weeklyData;
-      } else if (labels === 'monthly') {
-        trafficData.labels = monthlyLabels;
-        trafficData.datasets[0] = monthlyData;
-      }
-}
-
-trafficNav.addEventListener('click', e => {
-    // Check if the clicked element is a list item
-    if (e.target.tagName === 'LI') {
-      let link = e.target;
-      // If the clicked link is Hourly
-      if (link.textContent === 'Hourly') {
-        // Call the updateChart function to update the chart data
-        updateChart('hourly', hourlyData, hourlyLabels);
-      } // If the clicked link is Daily
-      if (link.textContent === 'Daily') {
-         updateChart('daily', dailyData, dailyLabels);
-      } // If the clicked link is Weekly
-      if (link.textContent === 'Weekly') {
-         updateChart('weekly', weeklyData, weeklyLabels);
-      } // If the clicked link is Monthly
-      if (link.textContent === 'Monthly') {
-         updateChart('monthly', monthlyData, monthlyLabels);
-      }
-    }
-});
-
 let trafficData = {
     labels:hourlyLabels,
     datasets: [{
@@ -178,7 +137,6 @@ let trafficChart = new Chart(trafficCanvas, {
 
 // STARTs Set up Alert Banner //
 const alertBanner = document.getElementById("alert");
-
 alertBanner.innerHTML =
 `
 <div class="alert-banner">
