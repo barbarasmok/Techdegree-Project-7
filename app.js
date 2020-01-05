@@ -61,8 +61,9 @@ const monthlyLabels = [
     "DEC"
 ];
  
+
+///////////////////////////////////////////
 // STARTs Set up Traffic Chart Functions //
- 
 const updateChart = (type, labels, data) => {
     // code to be executed
     if (labels === 'hourly') {
@@ -154,8 +155,11 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 // ENDs Set up Traffic Chart //
+//////////////////////////////
  
- 
+
+
+/////////////////////////////////
 // STARTs Set up Alert Banner //
 const alertBanner = document.getElementById("alert");
  
@@ -173,9 +177,10 @@ alertBanner.addEventListener('click', e => {
     }
 });
 // ENDs Set up Alert Banner //
+/////////////////////////////
  
  
- 
+/////////////////////////////////
 // STARTs Set up Daily Chart //
 const dailyCanvas = document.getElementById("daily-chart");
  
@@ -213,8 +218,10 @@ const dailyData = {
         options: dailyOptions
 });
 // ENDs Set up Daily Chart //
- 
- 
+///////////////////////////////// 
+
+
+///////////////////////////////// 
 // STARTs Set up Mobile Chart //
 const mobileCanvas = document.getElementById("mobile-users-chart");
  
@@ -267,3 +274,4 @@ send.addEventListener('click', (e) => {
     }
 });
 // ENDs Set up Mobile Chart //
+/////////////////////////////
