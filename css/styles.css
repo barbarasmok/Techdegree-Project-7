@@ -43,7 +43,7 @@ a {
 
 .header .header-logo h1 {
     color: #FFF;
-    font-family: 'Gupter', serif;
+    font-family: 'Lato', serif;
     font-size: 25px;
     font-weight: 400;
     height: 40px;
@@ -90,7 +90,7 @@ a {
 .header .header-nav .name {
     padding-left: 10px;
     color: #FFF;
-    font-family: 'Gupter', serif;
+    font-family: 'Lato', serif;
 }
 
 .header .icon-fill {
@@ -607,7 +607,7 @@ a {
         width: 90vw;
     }
 
-    .widget-container-half, .
+    .widget-container-half, 
     .mobile-users-container {
         width: 45vw;
     }
@@ -667,3 +667,6 @@ a {
         display: flex;
     }
 }
+
+
+
