@@ -104,23 +104,6 @@ trafficNav.addEventListener('click', e => {
 
 
 
-// BAR CHART
-const barChartData = [74, 100, 171, 125, 219, 201, 100];
-const barChartLabels = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-];
-
-// DOUGHNUT CHART
-const doughnutChartData = [23, 9, 68];
-const doughnutChartLabels = ["Phone", "Tablet", "Desktop"];
-
-
 const updateChart = (labels, data) => {
     // code to be executed
     if (labels === 'hourly') {
