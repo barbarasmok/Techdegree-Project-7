@@ -170,6 +170,7 @@ h3 {
 }
 
 .main .main-search {
+    margin-top: 20px;
     align-items: center;
     background-color: rgba(214, 210, 210, 0.651);
     display: flex;
@@ -615,6 +616,11 @@ h3 {
 
     .main {
         grid-template-columns: 50%;
+        margin-top: -10px;
+    }
+
+    .main .main-search {
+        grid-template-columns: 50%;
     }
 
     .nav {
@@ -722,6 +728,56 @@ h3 {
     .socials {
         display: flex;
     }
+
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas:
+            'header header'
+            'nav' 'main'
+    }
+
+    .header {
+        grid-column: 1 / span 2;
+    }
+
+    .nav {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 2;
+        width: 65px;
+        height: 100vh;
+        box-sizing: border-box;
+        box-shadow: none;
+    }
+
+    .main {
+        grid-column: 2 / span 2;
+        grid-row: 2 /span 2;
+        grid-template-columns: 50%;
+    }
+
+    .members {
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: 1px solid $default;
+    }
+    .settings {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-icon-container {
+        height: 100%;
+        @include flexCol;
+        justify-content: space-between;
+    }
+    .navlink-group {
+        @include flexCol;
+        justify-content: space-evenly;
+    }
+    .navlink {
+        width: 30px;
+        margin: 10px auto;
+    }
+
+    
+
 }
 
 
