@@ -36,6 +36,16 @@ h3 {
     text-transform: uppercase;
 }
 
+.thin {
+    background-color: #00B9CB;
+    border: 1px solid #00B9CB;
+    height: 2px;
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 /* STARTs Main Header*/
 .header {
     align-items: center;
@@ -119,13 +129,22 @@ h3 {
     display: flex;
     grid-area: nav; 
     justify-content: center;
+    width: 65px;
 }
 
+.activeNavItem {
+    background-color: #53E8F7;
+    border-radius: 25%;
+}
 .nav img {
+    margin: 5px;
+    margin-top:10px;
+    margin-left:8px;
     padding: 10px;
     height: 50px;
     width: 50px;
 }
+
 /* ENDs Main Nav*/
 
 
@@ -133,6 +152,7 @@ h3 {
 
 .main { 
     grid-area: main; 
+    margin: 30px;
 }
 
 .main-tab {
@@ -186,8 +206,8 @@ h3 {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 40px;
-    padding: 10px 20px;
-    width: 95%;
+    padding: 10px 0;
+    width: 98%;
 }
 
 .alert-banner-close {
@@ -202,6 +222,7 @@ h3 {
 /* STARTs Main Container*/
 .mainContainer {
     grid-area: mainContainer; 
+    margin: 0 15px 15px 15px;
 }
 
 .mainTab {
@@ -210,6 +231,7 @@ h3 {
 }
 
 .main h2 {
+    margin-top: 0;
     color: #09aeb9;
     font-size: 25px;
     font-weight: 400;
@@ -252,8 +274,7 @@ h3 {
     font-weight: 700;
     justify-content: space-between;
     line-height: 30px;
-    padding: 15px 25px;
-    border-bottom: 1px solid lightgray;
+    padding: 15px 30px;
 }
 
 .traffic-header {
@@ -321,8 +342,6 @@ h3 {
 }
 
 .socials {
-    border-bottom: 1px solid lightgray;
-    border-top: 1px solid lightgray;
     padding: 15px 25px;
 }
 
@@ -396,13 +415,11 @@ h3 {
 
 .members {
     border-right: 1px solid rgb(116,116,116);
-    border-bottom: 1px solid rgb(116,116,116);
     color: rgb(119, 118, 118);
     padding: 15px 25px 25px 25px;
 }
 
 .recent-activity {
-    border-bottom: 1px solid rgb(116,116,116);
     color: rgb(119, 118, 118);
     padding: 15px 25px;
 }
@@ -502,13 +519,15 @@ h3 {
 
 .button-primary {
     align-content: center;
-    background-color: #7475C4;
-    border-radius: 5px;
+    background-color: #00B9CB;
+    border-radius: 1px;
     color: #FFF;
     font-size: 20px;
     margin-top: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
+    text-decoration: none;
+    text-shadow: none;
 }
 
 /* ENDs Message User Widget*/
@@ -542,7 +561,7 @@ h3 {
 }
 
 #cancel {
-    border-radius: 5px;
+    border-radius: 1px;
     margin-top: 10px;
     background-color: rgba(240, 240, 240, 0.65);
 }
