@@ -278,6 +278,9 @@ h3 {
 
 
 /* STARTs Daily Traffic*/
+.daily {
+    padding: 15px 25px;
+}
 .daily, 
 .mobile {
     align-items: center;
@@ -320,6 +323,7 @@ h3 {
 .socials {
     border-bottom: 1px solid lightgray;
     border-top: 1px solid lightgray;
+    padding: 15px 25px;
 }
 
 .social-image-twitter, 
@@ -390,11 +394,17 @@ h3 {
 
 /* STARTs New Members + Recent Activity*/
 
-.members, 
-.recent-activity {
+.members {
     border-right: 1px solid rgb(116,116,116);
     border-bottom: 1px solid rgb(116,116,116);
     color: rgb(119, 118, 118);
+    padding: 15px 25px;
+}
+
+.recent-activity {
+    border-bottom: 1px solid rgb(116,116,116);
+    color: rgb(119, 118, 118);
+    padding: 15px 25px;
 }
 
 .members-container, 
@@ -456,14 +466,21 @@ h3 {
     flex-direction: column;
     justify-content: center;
     margin: 20px 30px;
+    padding: 15px 25px;
+
+}
+
+.user-settings .message h3 {
+    padding-left: 50px;
 }
 
 .message h3, .settings h3 {
     color: rgb(119, 118, 118);
     font-size: 20px;
     font-weight: 400;
-    padding: 20px 25px;
+    padding: 15px 25px;
 }
+
 
 .form-field {
     border-radius: 5px;
