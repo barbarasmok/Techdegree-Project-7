@@ -58,11 +58,11 @@ let trafficOptions = {
     scales: {
         yAxes: [{
             ticks: {
-            beginAtZero:true
+                beginAtZero:true
             }
         }]
     },
-    legend : {
+    legend: {
         display: false
     }
 };
