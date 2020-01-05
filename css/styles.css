@@ -34,7 +34,7 @@ a {
 /* STARTs Main Header*/
 .header {
     align-items: center;
-    background-color: #908e9e;
+    background-color: #00B9CB;
     display: flex;
     grid-area: header;
     justify-content: space-between;
@@ -110,7 +110,7 @@ a {
 /* STARTs Main Nav*/
 
 .nav { 
-    background-color: #b38fc2;
+    background-color: #1f0f26;
     display: flex;
     grid-area: nav; 
     justify-content: center;
@@ -173,9 +173,9 @@ a {
 
 .alert-banner {
     align-items: center;
-    background-color: rgb(142, 90, 161);
+    background-color: #53E8F7;
     border-radius: 5px;
-    color: #FFF;
+    color: #000;
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -439,10 +439,6 @@ a {
 
 
 /* STARTs Message User Widget*/
-.message {
-    border-bottom: 1px solid rgb(116,116,116);
-}
-
 .widget-container {
     display: flex;
     flex-direction: column;
@@ -471,7 +467,7 @@ a {
 
 .button-primary {
     align-content: center;
-    background-color: rgb(142, 90, 161);
+    background-color: #7475C4;
     border-radius: 5px;
     color: #FFF;
     font-size: 20px;

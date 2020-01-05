@@ -34,19 +34,19 @@ let trafficData = {
         "25-31"
     ],
     datasets: [{
-    data: [750, 
-        1250, 
-        1000, 
-        2000, 
-        1500, 
-        1750, 
-        1250, 
-        1850, 
-        2250, 
-        1500,
-        2500],
-    backgroundColor: 'rgba(116, 119, 191, .3)',
-    borderWidth: 1,
+        data: [750, 
+            1250, 
+            1000, 
+            2000, 
+            1500, 
+            1750, 
+            1250, 
+            1850, 
+            2250, 
+            1500,
+            2500],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
     }]
 };
 
@@ -111,5 +111,58 @@ const dailyData = {
         data: dailyData,
         options: dailyOptions
 });
-
 // ENDs Set up Daily Chart //
+
+
+// STARTs Set up Mobile Chart //
+const mobileCanvas = document.getElementById("mobile-users-chart");
+
+const mobileData = {
+    labels: [
+        "Desktop", 
+        "Tablet", 
+        "Phones"],
+    datasets: [{
+        label: '# of Users',
+        data: [2000, 550, 500],
+        borderWidth: 0,
+        backgroundColor: [
+        '#7477BF',
+        '#78CF82',
+        '#51B6C8'
+        ]
+    }]
+};
+
+const mobileOptions = {
+    legend: {
+        position: 'right',
+        labels: {
+            boxWidth: 20,
+            fontStyle: 'bold'
+        }
+    }
+}
+
+let mobileChart = new Chart(mobileCanvas, {
+    type: 'doughnut',
+    data: mobileData,
+    options: mobileOptions
+});
+ 
+const user = document.getElementById('userField');
+const message = document.getElementById('messageField');
+const send = document.getElementById('send');
+
+send.addEventListener('click', (e) => { 
+    if (user.value && message.value === "") {
+        alert("This message and user field is empty. Please fill");
+    } else if (user.value === "") {
+        alert("Fill message before pressing send");
+    } else if (message.value === "") {
+        alert("Fill uer field before pressing send");
+    } else {
+        alert("Message was sent");
+    }
+});
+// ENDs Set up Mobile Chart //
