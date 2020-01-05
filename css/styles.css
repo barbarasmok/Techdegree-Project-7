@@ -23,6 +23,7 @@ canvas {
 
 p {
     padding-left: 10px;
+    margin: 15px;
 }
 
 a {
@@ -318,11 +319,12 @@ a {
 }
 
 .social-image-twitter, 
-.social-image-facebook, .
+.social-image-facebook, 
 .social-image-google {
     align-items: center;
     display: flex;
     justify-content: center;
+    margin: 0% auto;
     margin: 0% auto;
 } 
 
@@ -356,7 +358,7 @@ a {
 .twitter-box, 
 .facebook-box, 
 .google-box {
-    background-color: rgba(214, 210, 210, 0.651);
+    background-color: rgba(240, 240, 240, 0.65);
     border: 1px solid rgb(116,116,116);
     border-radius: 5px;
     padding: 20px 20px;
@@ -366,7 +368,8 @@ a {
     color: rgb(119, 118, 118);
     font-weight: 600;
     font-size: 28px;
-    line-height: 30px;
+    line-height: 10px;
+    margin: 15px;
 }
 
 .twitter-svg, 
@@ -494,8 +497,14 @@ a {
     justify-content: space-between ;
 } 
 
-#cancel, #save {
-    color: white;
+#cancel {
+    color: #000;
+    font-size: 20px;
+    width: 48%;
+}
+
+#save {
+    color: #FFF;
     font-size: 20px;
     width: 48%;
 }
@@ -503,7 +512,7 @@ a {
 #cancel {
     border-radius: 5px;
     margin-top: 10px;
-    background-color: rgb(144, 142, 152);
+    background-color: rgba(240, 240, 240, 0.65);
 }
 
 #timezone {
