@@ -455,6 +455,11 @@ h3 {
     width: 50px;
 }
 
+.arrowImg {
+    width: 35px;
+    height: 35px;
+}
+
 .member-activity-container {
     flex-direction: column;
 }
