@@ -29,7 +29,7 @@ p {
 a {
     color: rgb(142, 90, 161);
     text-decoration: none;
-    padding-left: 10px;
+    padding-left: 25px;
 }
 
 h3 {
@@ -398,7 +398,7 @@ h3 {
     border-right: 1px solid rgb(116,116,116);
     border-bottom: 1px solid rgb(116,116,116);
     color: rgb(119, 118, 118);
-    padding: 15px 25px;
+    padding: 15px 25px 25px 25px;
 }
 
 .recent-activity {
