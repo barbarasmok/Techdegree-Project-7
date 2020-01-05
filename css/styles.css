@@ -214,8 +214,25 @@ body {
     border-bottom-color: #85DB80;
     opacity: 1;
 }
-
 /* ENDs Main Nav*/
+
+
+/* STARTs Main Search*/
+.headerHeadline {
+    flex: 0 152px;
+    text-align: center;
+}
+.mainSearch {
+    background-color: #FBFBFB;
+    flex: 1 75%;
+    padding: 14px 0;
+    position: relative;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
+
+/* ENDs Main Search*/
+
 
 
 /* STARTs Main Container*/
@@ -278,20 +295,16 @@ body {
     line-height: 30px;
     padding: 15px 25px;
     border-bottom: 1px solid lightgray;
+    margin-top: 25px;
+    margin-bottom: 30px;
 }
 
-.trafficHeader {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 30px;
-}
-
-#mainTraffic h3 {
+#mainTraffic .subheadline {
     font-size: 20px;
 }
 
 .trafficNav {
-    display: flex;
+    text-align: center;
 }
 
 .trafficNavLink {
@@ -308,9 +321,7 @@ body {
 
 /* STARTs Daily Traffic*/
 .dailyTraffic {
-    align-items: center;
-    color: rgb(119, 118, 118);
-    padding-bottom: 30px;
+    border-top: 1px solid #dadada;
 }
 
 #dailyTrafficChart,
@@ -326,6 +337,12 @@ body {
     color: rgb(119, 118, 118);
     padding-bottom: 30px;
     border-top: 1px solid lightgray;
+}
+
+.dailyTraffic,
+.mobileChart {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #dadada;
 }
 
 /* STARTs Social Stats*/
@@ -405,6 +422,16 @@ body {
       width: 350px;
     }
 
+    .trafficHeader {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .trafficHeader .subheadline {
+        margin-right: auto;
+    }
+
     #trafficChart {
         margin-top: 10px;
     }
@@ -413,11 +440,10 @@ body {
 
 @media (min-width: 680px) {
     .mainHeader {
-      flex-wrap: nowrap;
-      padding-top: 0;
-      padding-bottom: 0;
-      height: 70px;
-    }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
 
     .headerName{
         flex-basis: auto;
@@ -426,6 +452,23 @@ body {
 
     .notifications {
         right: -120px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .mainSearch {
+        padding-right: 1.5em;
+        border-top: none;
+        border-left: 1px solid #dadada;
+    }
+
+    .container {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
     }
 }
 
@@ -625,5 +668,17 @@ body {
     .toggleCheckbox:checked + .toggleSwitch:after {
         content: "on";
         left: 9.5px;
+    }
+
+    .dailyTraffic {
+        border-top: none;
+        border-right: 1px solid #dadada;
+        margin-right: -5px;
+    }
+
+    .dailyTraffic,
+    .mobileChart {
+        border-top: 1px solid #dadada;
+        padding-bottom: 30px;
     }
 }
