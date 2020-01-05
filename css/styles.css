@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html { 
@@ -168,7 +168,7 @@ body {
 }
 
 .bold {
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .headerUser {
