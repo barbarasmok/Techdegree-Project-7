@@ -44,6 +44,12 @@ body {
     margin: 25px 0 30px;
 }
 
+.subheadline {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 5px;
+}
 
 /* STARTs Main Header*/
 .mainHeader {
@@ -342,7 +348,19 @@ body {
 }
 
 .trafficNavLink {
-    padding-right: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 6px 12px;
+    color: #939393;
+    cursor: pointer;
+}
+
+.trafficNavLink:active {
+    background: #81C98F;
+    color: #fff;
+    border-radius: 100px;
 }
 
 #trafficChart {
@@ -410,6 +428,19 @@ body {
 .socialImage {
     margin-right: auto;
 }
+
+.socialMedia {
+    color: #7377BF;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: right;
+}
+
+.socialCount {
+    font-size: 2em;
+    font-weight: 300;
+    text-align: right;
+}
 /* ENDs Social Stats*/
 
 /* STARTs New Members + Recent Activity*/
@@ -417,6 +448,11 @@ body {
 .recentActivityContainer {
   padding-bottom: 20px;
   border-bottom: 1px solid #dadada;
+}
+
+.activityDesc {
+    font-size: 13.5px;
+    overflow: hidden;
 }
 
 .activityToggle {
@@ -452,6 +488,23 @@ body {
 
 .activityContainerNoWrap{
     flex-wrap: nowrap;
+}
+
+.activityDescName {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.activityEmail {
+    color: #7477BF;
+    font-size: 13px;
+}
+
+.activityJoinDate {
+    font-size: 13px;
+    text-align: right;
+    margin-top: 5px;
+    flex: 0 100%;
 }
 /* ENDs New Members + Recent Activity*/
 
@@ -520,6 +573,11 @@ body {
         flex: 0 75%;
         margin-right: auto;
     }
+
+    .activityJoinDate {
+        margin-top: 0;
+        flex-basis: auto;
+    }
 }
 
 
@@ -554,6 +612,12 @@ body {
     .container {
         padding-left: 1.5em;
         padding-right: 1.5em;
+    }
+
+    .activityDesc {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 90%;
     }
 }
 
@@ -668,6 +732,10 @@ body {
       align-items: center;
       justify-content: space-between;
     }
+
+    .activityDesc {
+        width: 100%;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -771,6 +839,15 @@ body {
         margin-right: 20px;
     }
 
+    .socialMedia {
+        font-size: 1.2em;
+        text-align: left;
+    }
+
+    .socialCount {
+        font-size: 2.8em;
+    }
+
     .messageUserWidget {
         margin-right: -5px;
         border-right: 1px solid #dadada;
@@ -780,11 +857,19 @@ body {
     .messageUserWidget .btnPositive {
         width: 100%;
     }
+
+    .activityDesc {
+        width: 90%;
+    }
 }
 
 @media (min-width: 1150px) {
     .alertMessage {
       display: inline-block;
       margin: 0 0 0 5px;
+    }
+
+    .activityDesc {
+        width: 100%;
     }
 }
