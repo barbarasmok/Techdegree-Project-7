@@ -61,24 +61,24 @@ const monthlyLabels = [
     "DEC"
 ];
  
-
-///////////////////////////////////////////
 // STARTs Set up Traffic Chart Functions //
-const updateChart = (type, labels, data) => {
+ 
+const updateChart = activity => {
     // code to be executed
-    if (labels === 'hourly') {
+    if (activity === 'hourly') {
         trafficData.labels = hourlyLabels;
-        trafficData.datasets[0] = hourlyData;
-      } else if (labels === 'daily') {
+        trafficData.datasets.data = hourlyData;
+      } else if (activity === 'daily') {
         trafficData.labels = dailyLabels;
-        trafficData.datasets[0] = dailyData;
-      } else if (labels === 'weekly') {
+        trafficData.datasets.data = dailyData.data;
+      } else if (activity === 'weekly') {
         trafficData.labels = weeklyLabels;
-        trafficData.datasets[0] = weeklyData;
-      } else if (labels === 'monthly') {
+        trafficData.datasets.data = weeklyData;
+      } else if (activity === 'monthly') {
         trafficData.labels = monthlyLabels;
-        trafficData.datasets[0] = monthlyData;
+        trafficData.datasets.data = monthlyData;
       }
+      trafficChart.update();
 }
  
 trafficNav.addEventListener('click', e => {
@@ -88,37 +88,16 @@ trafficNav.addEventListener('click', e => {
       // If the clicked link is Hourly
       if (link.textContent === 'Hourly') {
         // Call the updateChart function to update the chart data
-        updateChart('hourly', hourlyData, hourlyLabels);
+        updateChart('hourly');
       } // If the clicked link is Daily
       if (link.textContent === 'Daily') {
-         updateChart('daily', dailyData, dailyLabels);
+         updateChart('daily');
       } // If the clicked link is Weekly
       if (link.textContent === 'Weekly') {
-         updateChart('weekly', weeklyData, weeklyLabels);
+         updateChart('weekly');
       } // If the clicked link is Monthly
       if (link.textContent === 'Monthly') {
-         updateChart('monthly', monthlyData, monthlyLabels);
-      }
-    }
-});
- 
-trafficNav.addEventListener('click', e => {
-    // Check if the clicked element is a list item
-    if (e.target.tagName === 'LI') {
-      let link = e.target;
-      // If the clicked link is Hourly
-      if (link.textContent === 'Hourly') {
-        // Call the updateChart function to update the chart data
-        updateChart('hourly', hourlyData, hourlyLabels);
-      } // If the clicked link is Daily
-      if (link.textContent === 'Daily') {
-         updateChart('daily', dailyData, dailyLabels);
-      } // If the clicked link is Weekly
-      if (link.textContent === 'Weekly') {
-         updateChart('weekly', weeklyData, weeklyLabels);
-      } // If the clicked link is Monthly
-      if (link.textContent === 'Monthly') {
-         updateChart('monthly', monthlyData, monthlyLabels);
+         updateChart('monthly');
       }
     }
 });
@@ -155,11 +134,8 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 // ENDs Set up Traffic Chart //
-//////////////////////////////
  
-
-
-/////////////////////////////////
+ 
 // STARTs Set up Alert Banner //
 const alertBanner = document.getElementById("alert");
  
@@ -177,10 +153,9 @@ alertBanner.addEventListener('click', e => {
     }
 });
 // ENDs Set up Alert Banner //
-/////////////////////////////
  
  
-/////////////////////////////////
+ 
 // STARTs Set up Daily Chart //
 const dailyCanvas = document.getElementById("daily-chart");
  
@@ -218,10 +193,8 @@ const dailyData = {
         options: dailyOptions
 });
 // ENDs Set up Daily Chart //
-///////////////////////////////// 
-
-
-///////////////////////////////// 
+ 
+ 
 // STARTs Set up Mobile Chart //
 const mobileCanvas = document.getElementById("mobile-users-chart");
  
@@ -274,4 +247,3 @@ send.addEventListener('click', (e) => {
     }
 });
 // ENDs Set up Mobile Chart //
-/////////////////////////////
