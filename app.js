@@ -1,5 +1,5 @@
 const trafficCanvas = document.querySelector("#traffic-chart");
-const trafficNav = document.querySelector("#traffic-nav");
+const trafficNav = document.querySelector(".traffic-nav");
 
 // CHART INFORMATION
 // HOURLY
@@ -157,21 +157,21 @@ alertBanner.addEventListener('click', e => {
 // STARTs Set up Daily Chart //
 const dailyCanvas = document.getElementById("daily-chart");
 
-const dailyData = {
-    labels: ["S", "M", "T", "W", "T", "F", "S"],
-    datasets: [{
-        label: '# of Hits',
-        data: [75, 
-            115, 
-            175, 
-            125, 
-            225, 
-            200, 
-            100],
-        backgroundColor: '#7477BF',
-        borderWidth: 1
-        }]
-    };
+// const dailyData = {
+//     labels: ["S", "M", "T", "W", "T", "F", "S"],
+//     datasets: [{
+//         label: '# of Hits',
+//         data: [75, 
+//             115, 
+//             175, 
+//             125, 
+//             225, 
+//             200, 
+//             100],
+//         backgroundColor: '#7477BF',
+//         borderWidth: 1
+//         }]
+//     };
     const dailyOptions = {
         scales: {
             yAxes: [{
