@@ -37,6 +37,13 @@ body {
     padding: 0 0.6em;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 25px 0 30px;
+}
+
 
 /* STARTs Main Header*/
 .mainHeader {
@@ -153,6 +160,14 @@ body {
     border-radius: 100px;
     visibility: hidden;
 }
+
+.bold {
+    font-weight: 700;
+}
+
+.headerUser {
+    font-size: 14px;
+}
 /* ENDs Main Header*/
 
 
@@ -221,7 +236,10 @@ body {
 .headerHeadline {
     flex: 0 152px;
     text-align: center;
+    font-size: 1.25em;
+    font-weight: 600;
 }
+
 .mainSearch {
     background-color: #FBFBFB;
     flex: 1 75%;
@@ -278,11 +296,27 @@ body {
 /* ENDs Main Container*/
 
 
-
-.alertBanner {
-    display: flex;
+/* STARTs Alert Banner*/
+.alert {
+    background: #7377BF;
+    color: #fff;
+    display: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    margin-top: 25px;
+    position: relative;
 }
 
+.alertMessage {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.alertTitle {
+    font-size: 14px;
+    font-weight: 700;
+}
+/* ENDs Alert Banner*/
 
 
 /* STARTs Main Traffic*/
@@ -349,18 +383,40 @@ body {
 .socialStats {
     border-bottom: 1px solid lightgray;
     border-top: 1px solid lightgray;
-    padding: 20px 20px;
+    padding: 12px 0 0;
+    margin-bottom: 50px;
 }
 
-/* STARTs New Members + Recent Activity*/
-.newMembersContainer, 
-.recentActivityContainer {
-    border-right: 1px solid rgb(116,116,116);
-    border-bottom: 1px solid rgb(116,116,116);
-    color: rgb(119, 118, 118);
+.socialStatsContainer {
+    cursor: pointer;
+    background-color: #FBFBFB;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin-bottom: 30px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5em;
+    margin: 18px 0 0;
+    flex: 0 100%;
+    transition: background 0.4s;
+}
+
+.socialStatsContainer:hover {
+    background: #7477BF;
+    color: #fff;
+}
+
+.socialImage {
+    margin-right: auto;
+}
+/* ENDs Social Stats*/
+
+/* STARTs New Members + Recent Activity*/
+.newMembersContainer,
+.recentActivityContainer {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dadada;
 }
 
 .activityToggle {
@@ -380,22 +436,46 @@ body {
     height: 38px;
 }
 
+.activivityContainer {
+    border-top: 1px solid #dadada;
+    padding: 20px 0 16px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.activivityContainer:last-child {
+    border: none;
+}
+
+.activityContainerNoWrap{
+    flex-wrap: nowrap;
+}
+/* ENDs New Members + Recent Activity*/
+
 
 /* STARTs Message User Widget*/
-.messageUserWidget {    
-    border-bottom: 1px solid rgb(116,116,116);
-    flex-direction: column;
+.messageUserWidget {
+    padding: 12px 0 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dadada;
 }
+/* ENDs Message User Widget*/
+
 
 /* STARTs Settings Container*/
 .settingsContainer {
-    color: rgb(119, 118, 118);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 30px; 
-    padding-bottom: 35px;
+    padding: 12px 0 0;
 }
+  
+.wrapper {
+    padding: 0 5px;
+}
+  
+/* ENDs Settings Container*/
+
 
 /* Butttons */
 .btnNeutral, 
@@ -434,6 +514,11 @@ body {
 
     #trafficChart {
         margin-top: 10px;
+    }
+
+    .activityContent {
+        flex: 0 75%;
+        margin-right: auto;
     }
 }
 
@@ -568,6 +653,21 @@ body {
         border-left: 1px solid rgb(144, 142, 152);
     }
 
+    .activityContent {
+        flex-basis: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .flex {
+      padding: 0 5px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -580,37 +680,22 @@ body {
         display: flex;
     }
 
+    .newMembersContainer,
+    .recentActivityContainer {
+        border-top: 1px solid #dadada;
+        padding-bottom: 30px;
+    }
+    
+    .activivityContainer {
+        border-top: none;
+        border-right: 1px solid #dadada;
+        margin-right: -5px;
+        padding-top: 5px;
+    }
+
     .messageUserWidget,
-    .settingsContainer, 
-    .newMembers,
-    .recentActivity, 
-    .dailyTraffic,
-    .mobileChart {
-        display: inline-block;
-        vertical-align: top;
-        width: 50%;
-    }
-
-    .settingsField, 
-    .messageArea, 
-    .messageField, 
-    .mainSearch {
-        width: 100%;
-        font-size: 14px;
-        outline: 0;
-        border: none;
-        border: 1px solid #dadada;
-        border-radius: 5px;
-        color: #818181;
-        background: #FBFBFB;
-        padding: 10.5px 18px;
-        display: block;
-    }
-
-    .settingsField {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        background: url("../../icons/icon-angle-down.svg") no-repeat right #FBFBFB;
+    .settingsContainer {
+        padding-bottom: 40px;
     }
 
     .toggleSwitch {
@@ -680,5 +765,26 @@ body {
     .mobileChart {
         border-top: 1px solid #dadada;
         padding-bottom: 30px;
+    }
+
+    .socialImage {
+        margin-right: 20px;
+    }
+
+    .messageUserWidget {
+        margin-right: -5px;
+        border-right: 1px solid #dadada;
+        border-bottom: none;
+    }
+
+    .messageUserWidget .btnPositive {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1150px) {
+    .alertMessage {
+      display: inline-block;
+      margin: 0 0 0 5px;
     }
 }
