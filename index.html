@@ -12,88 +12,89 @@
 
 <body class="mainGridContainer">
             
-    <!-- STARTs Header -->
-    <header class="mainHeader" id="dashboard">
-        <h1 class="headerName"><span class="bold">SMOK</span>App</h1>
-        
-        <div class="headerContainer">
-            <img class="headerLogo" src="icons/icon-bell.svg" alt="Notification Bell Icon">
-            <span class="notificationLight">&dot;</span>
-            <ul class="notifications">
-            </ul>
-        </div>
-        
-        <img class="profileImage" src="images/member-1.jpg" alt="User Profile Image">
-        <span class="headerUser">Barbara Smok</span>
-    </header> 
+    <!--STARTs Grid Container-->
+    <div class="grid-container">
+        <!--STARTs Header-->
+        <div class="header">
+            <div class="header-logo">
+                <h1><span>Smok</span>App&trade;</h1>
+            </div>
+             <div class="header-nav">
+                <div class="notifications">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve">
+                        <path class="icon-fill" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+                        <circle cx="25" cy="6" r="5" fill="lightgreen" />
+                    </svg>
+                </div>
+                <div class="divider"></div>
+                <div class="profile">
+                    <img src="images/member-1.jpg" alt="Profile image">
+                </div>
+                <div class="name">Barbara Smok</div>
+        </div> <!--ENDs Header-->
+    </div> <!--ENDs Grid Container-->
 
 
     <!-- STARTs Main Nav -->
-    <nav class="mainNav">
-    <div>
-        <a class="mainNavLink mainNavSelected" href="#dashboard"><img class="navIcon" src="icons/icon-dashboard.svg" alt="Navigation Dashboard Icon"></a>
-        <a class="mainNavLink" href="#members"><img class="navIcon" src="icons/icon-members.svg" alt="Navigation Members Icon"></a>
-        <a class="mainNavLink" href="#visits"><img class="navIcon" src="icons/icon-visits.svg" alt="Navigation Visits Icon"></a>
-        <a class="mainNavLink" href="#settings"><img class="navIcon" src="icons/icon-settings.svg" alt="Navigation Settings Icon"></a>
-    </div> 
-    </nav>
+    <div class="nav">
+        <img src="icons/icon-dashboard.svg" alt="dashboard">
+        <img src="icons/icon-members.svg" alt="members">
+        <img src="icons/icon-visits.svg" alt="visits">
+        <img src="icons/icon-settings.svg" alt="settings">
+    </div>
     <!-- ENDs Main Nav -->
 
-    <!-- STARTs Main Search - Header --> 
-    <section class="header">
-        <h2 class="headerHeadline">Dashboard</h2>
-        <div class="mainSearch">
-            <input class="search" type="search" placeholder="Search" />
-        </div>
-    </section> <!-- ENDs Main Search - Header --> 
-
-
     <!-- STARTs Main Container -->    
-    <main class="mainContainer">  
+    <main class="main">  
 
-        <div class="container">
-            <!-- STARTs Alert Banner --> 
-            <div class="alert" id="alertMessage">    
-            </div> <!-- ENDs Alert Banner --> 
+        <!-- STARTs Main Search - Header --> 
+        <div class="main-tab"> 
+            <h2>Dashboard</h2>
+            <div class="main-search">
+                <input type="search" placeholder="Search" />
+            </div>
+        </div> <!-- ENDs Main Search - Header --> 
 
-            <!-- STARTs Main Traffic Stats --> 
-            <section id="mainTraffic" id="visits">
-                <div class="trafficHeader"> <!-- STARTs Traffic Header --> 
-                    <h3 class="subheadline">Traffic</h3>
-                    <ul class="trafficNav">
-                        <li class="trafficNavLink">Hourly</li>
-                        <li class="trafficNavLink">Daily</li>
-                        <li class="trafficNavLink">Weekly</li>
-                        <li class="trafficNavLink">Monthly</li>
-                    </ul>
-                
-                    <div class="widgetFull"> <!-- STARTs Widget Full --> 
-                        <canvas id="trafficChart"></canvas>
-                    </div> <!-- ENDs Widget Full --> 
-                </div> <!-- ENDs container --> 
-            </section> <!-- ENDs Main Traffic Stats --> 
-        </div>
+        <!-- STARTs Alert Banner --> 
+        <div class="alert" id="alertMessage">    
+        </div> <!-- ENDs Alert Banner --> 
+
+
+        <!-- STARTs Main Traffic Stats --> 
+        <section class="traffic">
+            <!-- STARTs Main Traffic Header --> 
+            <div class="traffic-header">
+                <h3>TRAFFIC</h3>
+                <ul class="traffic-nav">
+                    <li class="traffic-nav-link">Hourly</li>
+                    <li class="traffic-nav-link">Daily</li>
+                    <li class="traffic-nav-link active">Weekly</li>
+                    <li class="traffic-nav-link">Monthly</li>
+                </ul>
+            </div>  <!-- ENDs Main Traffic Header --> 
+            <div class="widget-container-full">
+                <canvas id="traffic-chart"></canvas>
+            </div>
+        </section> <!-- ENDs Main Traffic Stats --> 
+       
+
 
         <!-- STARTs Daily Traffic Stats --> 
-        <section class="dailyTraffic">
-            <div class="container"> <!-- STARTs Traffic Header --> 
-                <h3 class="subheadline">Daily Traffic</h3>
-                <div class="widgetDailyTraffic"> <!-- STARTs Widget Daily Traffic --> 
-                    <canvas id="dailyTrafficChart"></canvas>
-                </div> <!-- ENDs Widget Daily Traffic --> 
-            </div> <!-- ENDs Container --> 
+        <section class="daily">
+            <h3 class="daily-heading">Daily Traffic</h3>
+            <div class="widget-container-half">
+                <canvas id="daily-chart"></canvas>
+            </div>
         </section> <!-- ENDs Daily Traffic Stats -->
         
         
         <!-- STARTs Mobile Chart Stats --> 
-        <section class="mobileChart">
-            <div class="container"> <!-- STARTs Mobile Chart Header --> 
-                <h3 class="subheadline">Mobile Users</h3>
-                <div class="widgetDailyTraffic"> <!-- STARTs Widget Daily Traffic --> 
-                    <canvas id="devicesChart"></canvas>
-                </div> <!-- ENDs Widget Daily Traffic --> 
-            </div> <!-- ENDs Container --> 
-        </section> <!-- ENDs Mobile Chart Stats --> 
+        <section class="mobile">
+            <h3 class="mobile-heading">Mobile Users</h3>
+            <div class="mobile-users-container">
+                <canvas id="mobile-users-chart"></canvas>
+            </div>
+        </section><!-- ENDs Mobile Chart Stats --> 
 
         <!-- STARTs Social Stats --> 
         <section class="socialStats">
