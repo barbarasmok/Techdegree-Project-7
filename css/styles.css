@@ -32,6 +32,10 @@ a {
     padding-left: 10px;
 }
 
+h3 {
+    text-transform: uppercase;
+}
+
 /* STARTs Main Header*/
 .header {
     align-items: center;
@@ -351,15 +355,15 @@ a {
     justify-content: center;
     border-radius: 50%;
     background-color: rgb(116, 119, 189);
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
 } 
 
 .twitter-box, 
 .facebook-box, 
 .google-box {
     background-color: rgba(240, 240, 240, 0.65);
-    border: 1px solid rgb(116,116,116);
+    border: 1px solid rgb(179, 179, 179);
     border-radius: 5px;
     padding: 20px 20px;
 }
@@ -367,14 +371,19 @@ a {
 .number {
     color: rgb(119, 118, 118);
     font-weight: 600;
-    font-size: 28px;
+    font-size: 38px;
     line-height: 10px;
     margin: 15px;
 }
 
 .twitter-svg, 
 .google-svg {
-    padding-top: 15px;
+    padding-top: 20px;
+    width: 50%;
+} 
+
+.facebook-svg {
+    padding-top: 10px;
     width: 50%;
 } 
 /* ENDs Social Stats*/
@@ -403,11 +412,11 @@ a {
 .recent-2, 
 .recent-3, 
 .recent-4  {
-    border-bottom: 1px solid rgb(116,116,116);
+    border-bottom: 1px solid rgb(179, 179, 179);
     display:flex;
     align-items: center;
     justify-content: flex-start;
-    margin:  0 15px ;
+    margin:  0 25px ;
     padding: 15px;
 }
 
