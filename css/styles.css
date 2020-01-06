@@ -31,6 +31,7 @@ a {
     color: rgb(142, 90, 161);
     text-decoration: none;
     padding-left: 15px;
+    font-size: 10px;
 }
 
 h3 {
@@ -392,6 +393,10 @@ h3 {
     text-align: center;
 }
 
+.recent-activity h3 {
+    margin-top: 10px;
+}
+
 .social-name {
     color: rgb(142, 90, 161);
     font-size: 18px;
@@ -457,7 +462,7 @@ h3 {
 
 .members {
     color: rgb(119, 118, 118);
-    padding: 15px 0 25px 0;
+    padding: 15px 25px;
     display:flex;
     flex-wrap: wrap;
     margin: auto;
@@ -504,6 +509,13 @@ h3 {
     background-color: rgba(231, 231, 231, 0.85);
 }
 
+.member-1, 
+.member-2, 
+.member-3, 
+.member-4 {
+    padding-top: 10px;
+}
+
 .member-4, 
 .recent-4 {
     border-bottom: none;
@@ -512,13 +524,16 @@ h3 {
 .date {
     align-items: center;
     justify-content: flex-start;
-    font-size: 12px;
-    margin: 5px;
+    font-size: 10px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .names,
 .activityText {
     margin: 5px;
+    font-size: 12px;
 }
 
 .activityText {
@@ -546,13 +561,12 @@ h3 {
 .arrowImg {
     width: 20px;
     height: 20px;
-    margin-right: 10px;
 }
 
 .memberImg {
     align-content: center;
     border-radius: 50%;
-    width: 30px;
+    width: 50px;
 }
 
 .member-activity-container {
