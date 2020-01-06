@@ -675,9 +675,6 @@ button, input, optgroup, select, textarea {
     
 }
 
-element {
-    background: rgb(50, 92, 131) none repeat scroll 0% 0%;
-}
 
 * button:hover {
     letter-spacing: 2px;
@@ -781,44 +778,17 @@ input:checked[type=checkbox]:before {
 
 
 /* STARTs Time Zone*/
-.timezone-picker:hover {
-    cursor: pointer;
-}
 
-.timezone-picker {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.form-field {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
     width: 100%;
-    background: #ccc;
-    border-radius: 3px;
-    color: black;
-    padding: 10px;
-    margin: 20px auto 10px;
-    box-sizing: border-box;
-    transition: 0.4s;
 }
 
-.timezone {
-    margin: auto;
-    padding-left: 0;
-}
-
-.timezone-picker img {
-    transition: 0.5s;
-    margin: auto 5px auto auto;
-}
-
-.clicker {
-    display: none;
-    width: 20px;
-    padding: 10px 5px;
-}
-
-.check {
-    display: none;
-    width: 40px;
+.form-area {
+    border-radius: 5px;
+    padding-bottom: 90px;
+    margin-top: 10px;
 }
 
 /* STARTs Save and Cancel Buttons*/

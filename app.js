@@ -1,5 +1,6 @@
 const trafficCanvas = document.querySelector("#traffic-chart");
 const trafficNav = document.querySelector(".traffic-nav");
+const timeZoneChoice = {};
  
 // CHART INFORMATION
 // HOURLY
@@ -247,3 +248,26 @@ send.addEventListener('click', (e) => {
     }
 });
 // ENDs Set up Mobile Chart //
+
+
+// TIMEZONE OVERLAY
+$(".timezone-picker").on("click", function() {
+    $(".overlay").fadeIn();
+    $(".timezone-overlay-container").slideDown();
+  });
+  $(".close-timezone").on("click", function() {
+    closeTimeZones();
+  });
+
+
+
+//CLOSE TIMEZONE
+function closeTimeZones() {
+    window.setTimeout(function() {
+      $(".overlay").fadeOut();
+    }, 400);
+    $(".timezone-overlay-container").slideUp();
+    window.setTimeout(function() {
+      $(".grid-container").css("filter", "none");
+    }, 500);
+}
