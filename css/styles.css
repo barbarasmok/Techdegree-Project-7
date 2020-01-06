@@ -56,7 +56,7 @@ h3 {
     background-color: #714fce;
     border: 1px solid #714fce;
     height: 2px;
-    width: 90%;
+    width: 80%;
     margin: auto;
     margin-top: 30px;
 }
@@ -206,7 +206,7 @@ h3 {
 .main .main-search input {
     appearance: none;
     border: 0;
-    border: 1px solid rgb(116,116,116);
+    border: 1px solid rgb(219, 219, 219);
     border-radius: 4px;
     display: block;
     height: 40px;
@@ -605,6 +605,7 @@ h3 {
     margin-top: auto;
     width: 90%;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .settings1 {
@@ -635,7 +636,7 @@ h3 {
     margin: 5px auto;
     width: 100%;
     box-sizing: border-box;
-    background: #ccc;
+    background: rgb(219, 219, 219);
     color: black;
     padding: 10px;
 }
@@ -749,7 +750,7 @@ input[type=checkbox]:hover {
 }
   
 input:checked[type=checkbox] {
-    background: #1cc4ad;
+    background: #00B9CB;
 }
   
 input[type=checkbox]:before {
@@ -799,8 +800,9 @@ input:checked[type=checkbox]:before {
     transition: 0.4s;
 }
 
-.timezone-picker p {
-    margin: auto auto auto 5px;
+.timezone {
+    margin: auto;
+    padding-left: 0;
 }
 
 .timezone-picker img {
@@ -828,6 +830,13 @@ input:checked[type=checkbox]:before {
     margin: 5px auto;
 }
 
+.save {
+    background-color: #00B9CB;
+}
+
+.cancel {
+    background-color: rgb(142, 90, 161);
+}
 
 
 
