@@ -30,7 +30,7 @@ p {
 a {
     color: rgb(142, 90, 161);
     text-decoration: none;
-    padding-left: 25px;
+    padding-left: 15px;
 }
 
 h3 {
@@ -56,6 +56,12 @@ h3 {
     grid-area: header;
     justify-content: space-between;
     padding: 0 20px;
+}
+
+
+.header .header-logo {
+    margin: auto;
+    padding-top: 5px;
 }
 
 .header .header-logo h1 {
@@ -138,10 +144,10 @@ h3 {
 
 .activeNavItem {
     background-color: #53E8F7;
-    border-radius: 25%;
+    border-radius: 10%;
 }
 .nav img {
-    margin: 5px;
+    margin: 10px;
     margin-top:10px;
     margin-left:8px;
     padding: 10px;
@@ -176,7 +182,6 @@ h3 {
 .main .main-search {
     margin-top: 20px;
     align-items: center;
-    background-color: rgba(214, 210, 210, 0.651);
     display: flex;
     flex-wrap: wrap;
     height: 60px;
@@ -193,7 +198,7 @@ h3 {
     height: 40px;
     line-height: 20px;
     padding: 10px 15px;
-    width: 85%;
+    width: 90%;
     margin: auto;
 }
 
@@ -213,8 +218,9 @@ h3 {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 40px;
-    padding: 10px 0;
+    padding: 5px 0;
     width: 98%;
+    font-size: 11px;
 }
 
 .alert-banner-close {
@@ -246,6 +252,8 @@ h3 {
     height: 30px;
     line-height: 30px;
     padding: 25px 25px;
+    margin: auto;
+    text-transform: uppercase;
 }
 
 .mainContainer .mainSearch  {
@@ -295,15 +303,18 @@ h3 {
 
 .traffic h3 {
     font-size: 20px;
+    margin: auto;
 }
 
 .traffic-nav {
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .traffic-nav-link {
     padding-right: 20px;
+    font-size: 12px;
 }
 
 /* ENDs Main Traffic*/
@@ -321,16 +332,18 @@ h3 {
 }
 
 .mobile {
-    border-top: 1px solid lightgray;
 }
 
-.daily-heading, 
+.daily-heading,
 .mobile-heading {
     color: rgb(119, 118, 118);
     font-size: 20px;
     font-weight: 400;
-    padding: 25px 25px;
+    padding: 0 25px 25px;
+    margin: auto;
+    text-align: center;
 }
+
 
 
 /* STARTs Mobile Chart*/
@@ -349,11 +362,11 @@ h3 {
 
 /* STARTs Social Stats*/
 .social-container {
-    padding: 20px 20px;
+    padding: 10px 10px;
 }
 
 .socials {
-    padding: 15px 25px;
+    padding: 0 25px 15px;
 }
 
 .social-image-twitter, 
@@ -374,6 +387,9 @@ h3 {
     font-size: 20px;
     font-weight: 400;
     padding: 25px 25px;
+    padding: 0 0 25px;
+    margin: auto;
+    text-align: center;
 }
 
 .social-name {
@@ -391,18 +407,24 @@ h3 {
     justify-content: center;
     border-radius: 50%;
     background-color: rgb(116, 119, 189);
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
 } 
 
 .twitter-box, 
 .facebook-box, 
 .google-box {
-    background-color: rgba(240, 240, 240, 0.65);
-    border: 1px solid rgb(179, 179, 179);
+    background-color: rgba(219, 219, 219, 0.65);
     border-radius: 5px;
-    padding: 20px 20px;
+    padding: 10px 10px;
 }
+
+.twitter-box:hover, 
+.facebook-box:hover, 
+.google-box:hover {
+    background-color: rgba(279, 279, 279, 0.85);
+}
+
 
 .number {
     color: rgb(119, 118, 118);
@@ -414,22 +436,31 @@ h3 {
 
 .twitter-svg, 
 .google-svg {
-    padding-top: 20px;
+    padding-top: 15px;
     width: 50%;
 } 
 
 .facebook-svg {
-    padding-top: 10px;
+    padding-top: 0;
+    padding-right: 35px;
     width: 50%;
 } 
 /* ENDs Social Stats*/
 
 /* STARTs New Members + Recent Activity*/
 
+.member-activity-container {
+    display:flex;
+    flex-wrap: wrap;
+    margin:  auto;
+}
+
 .members {
-    border-right: 1px solid rgb(116,116,116);
     color: rgb(119, 118, 118);
-    padding: 15px 25px 25px 25px;
+    padding: 15px 0 25px 0;
+    display:flex;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
 .recent-activity {
@@ -441,7 +472,7 @@ h3 {
 .recent-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    width: 95%;
     justify-content: space-between;
 }
 
@@ -453,13 +484,24 @@ h3 {
 .recent-2, 
 .recent-3, 
 .recent-4  {
-    border-bottom: 1px solid rgb(179, 179, 179);
     display:flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    margin:  0 25px ;
-    padding: 15px;
+    margin: auto;
+    font-size: 13px;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.member-1:hover, 
+.member-2:hover, 
+.member-3:hover, 
+.member-4:hover, 
+.recent-1:hover, 
+.recent-2:hover, 
+.recent-3:hover, 
+.recent-4:hover  {
+    background-color: rgba(231, 231, 231, 0.85);
 }
 
 .member-4, 
@@ -470,7 +512,21 @@ h3 {
 .date {
     align-items: center;
     justify-content: flex-start;
-    margin-left: auto;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.names,
+.activityText {
+    margin: 5px;
+}
+
+.activityText {
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+    margin: 8px;
+    line-height: 1.1;
 }
 
 .recent-container span {
@@ -488,8 +544,15 @@ h3 {
 }
 
 .arrowImg {
-    width: 35px;
-    height: 35px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.memberImg {
+    align-content: center;
+    border-radius: 50%;
+    width: 30px;
 }
 
 .member-activity-container {
@@ -640,6 +703,7 @@ h3 {
 
     .main .main-search {
         grid-template-columns: 50%;
+        background-color: rgba(214, 210, 210, 0.651);
     }
 
     .nav {
@@ -674,6 +738,29 @@ h3 {
     .members, 
     .message {
         grid-column: 1 / span 1;
+    }
+
+    .members {
+        border-right: 1px solid rgb(116,116,116);
+    }
+
+    .member-1, 
+    .member-2, 
+    .member-3, 
+    .member-4, 
+    .recent-1, 
+    .recent-2, 
+    .recent-3, 
+    .recent-4  {
+        border-bottom: 1px solid rgb(179, 179, 179);
+    }
+
+
+    .date {
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: auto;
+        font-size: 12px;
     }
 
     .mobile, 
