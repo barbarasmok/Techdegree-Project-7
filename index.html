@@ -276,65 +276,43 @@
             <hr class="thin">
 
             <!-- STARTs Message User Widget --> 
-            <div class="user-settings">
-                <section class="message">
-                    <h3>Message User</h3>
-                    <form class="widget-container">
-                        <input type="text" placeholder="Search for user" class="form-field" id="userField">
-                        <textarea placeholder="Message for user" class="form-area" id= "messageField" ></textarea>
-                        <button class="button-primary" id="send">Send</button>
-                    </form>
-                </section> <!-- ENDs Message User Widget --> 
+           
 
 
 
             <!-- STARTs Settings Container --> 
-            <section class="settings">
-                <div class="setting-content">
-                    <h3>Settings</h3>
-                    <div class="settings-container">
-                        <label class="switch-light switch-candy switch-ios" for="sendEmailNotification" onclick="">
-                            <input id="sendEmailNotification" type="checkbox">
-                            <strong>
-                                Send Email Notifications
-                            </strong>
-                            <span>
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                            </span>
-                        </label> 
-                        
-                        <label class="switch-light switch-candy switch-ios" onclick="">
-                            <input type="checkbox">  
-                            <strong>
-                                Set Profile to Public
-                            </strong>
-                            <span>
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                            </span>
-                        </label>
-                        
-                        <select class="form-field" id="timezone">
-                            <option disabled selected>Select a Timezone</option>
-                            <option>EST</option>
-                            <option>AST</option>
-                            <option>CST</option>
-                            <option>MST</option>
-                            <option>PST</option>
-                        </select>
+            <settings id="settings">
+                <settings1>
+                    <h2>Message user</h2>
+                    <div class="message-user-flex-container">
+                        <input class="message-user-input" type="search" placeholder="search for user">
+                        <textarea class="message-user-textarea" placeholder="message for user"></textarea>        
+                        <button class="send-btn">send</button>
                     </div>
-                        
-                    <div class="settings-button">
-                        <button class="button-primary" id="save">Save</button>
-                        <button class="button-disabled" id="cancel">Cancel</button>
+                </settings1>
+                <settings2>
+                    <h2>settings</h2>
+                    <div class="setting-options">
+                        <div class="settings-flex input-default">
+                            <p>Send Email Notifications</p>
+                            <input class="email-check" id="email-checkbox" type="checkbox" name="">
+                        </div>
+                        <div class="settings-flex input-default">
+                            <p>Set Profile To Public</p>
+                            <input class="profile-check" id="profile-checkbox" type="checkbox" name="">
+                        </div>
                     </div>
-                </div>
-            </section><!-- ENDs Settings Container --> 
-            </div> <!-- ENDs User Settings --> 
-
+                    <div class="timezone-picker">
+                        <p class="timezone" id="timezone-text">Select Timezone</p>
+                        <img class="clicker" src="images/icons/downarrow.png">
+                        <img class="check" src="images/icons/tick-Teal.png">
+                    </div>
+                    <div class="flex-buttons">
+                        <button class="save">save</button>
+                        <button class="cancel">cancel</button>
+                    </div>
+                </settings2>
+            </settings>
         </main> <!-- ENDs Main Container -->
     </div> <!-- ENDs Main Grid Container -->  
 

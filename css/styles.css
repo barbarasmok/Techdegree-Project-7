@@ -36,16 +36,11 @@ a {
 
 h3 {
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .thin {
-    background-color: #00B9CB;
-    border: 1px solid #00B9CB;
-    height: 2px;
-    width: 95%;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    display: none;
 }
 
 /* STARTs Main Header*/
@@ -305,6 +300,7 @@ h3 {
 .traffic h3 {
     font-size: 20px;
     margin: auto;
+    padding-bottom: 20px;
 }
 
 .traffic-nav {
@@ -330,6 +326,9 @@ h3 {
     align-items: center;
     color: rgb(119, 118, 118);
     padding-bottom: 30px;
+    padding-top: 50px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .mobile {
@@ -340,7 +339,7 @@ h3 {
     color: rgb(119, 118, 118);
     font-size: 20px;
     font-weight: 400;
-    padding: 0 25px 25px;
+    padding-bottom: 40px;
     margin: auto;
     text-align: center;
 }
@@ -367,7 +366,10 @@ h3 {
 }
 
 .socials {
-    padding: 0 25px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    padding-bottom: 40px;
 }
 
 .social-image-twitter, 
@@ -394,7 +396,7 @@ h3 {
 }
 
 .recent-activity h3 {
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .social-name {
@@ -466,6 +468,7 @@ h3 {
     display:flex;
     flex-wrap: wrap;
     margin: auto;
+    
 }
 
 .recent-activity {
@@ -575,8 +578,225 @@ h3 {
 /* ENDs New Members + Recent Activity*/
 
 
-/* STARTs Message User Widget*/
-.widget-container {
+/* STARTs SETTINGS*/
+.settings {
+    display: grid;
+    padding: 10px;
+}
+
+.settings1 {
+    border-bottom: 1px solid #714fce;
+    border-bottom-color: rgb(113, 79, 206);
+    padding: 30px 0;
+}
+
+.message-user-textarea {
+    height: 100%;
+    resize: none;
+}
+
+.message-user-flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 403px;
+}
+  
+.message-user-input,
+.message-user-textarea {
+    margin: 5px auto;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ccc;
+    color: black;
+    padding: 10px;
+}
+  
+.message-user-textarea {
+    height: 100%;
+    resize: none;
+}
+  
+.send-btn {
+    margin: 5px auto;
+    width: 100%;
+    background: #714fce;
+    border: none;
+    color: white;
+}
+  
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+* button {
+    width: auto;
+    text-transform: uppercase;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+element {
+    background: rgb(50, 92, 131) none repeat scroll 0% 0%;
+}
+
+* button:hover {
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.send-btn {
+    margin: 5px auto;
+    width: 100%;
+    background: #714fce;
+    border: none;
+    color: white;
+}
+
+.settings2 {
+    padding: 30px 20px;
+    color: white;
+    border-bottom: 1px solid#714fce;
+    border-bottom-color: rgb(113, 79, 206);
+}
+
+.setting-options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+}
+
+.settings-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 5px auto;
+    padding: 15px;
+    width: 100%;
+    border-radius: 3px;
+    box-sizing: border-box;
+    transition: 0.8s;
+}
+
+input[type="checkbox"] {
+    margin: 15px auto;
+    position: relative;
+    width: 60px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #3c454b;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px
+    rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+}
+
+.input-active {
+    background: #363e4e !important;
+}
+  
+input[type=checkbox]:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+  
+input:checked[type=checkbox] {
+    background: #1cc4ad;
+}
+  
+input[type=checkbox]:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: white;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+  
+input:checked[type=checkbox]:before {
+    left: 40px;
+}
+
+* input, textarea {
+    border-radius: 3px;
+    background-color: #ccc;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+
+/* STARTs Time Zone*/
+.timezone-picker:hover {
+    cursor: pointer;
+}
+
+.timezone-picker {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    background: #ccc;
+    border-radius: 3px;
+    color: black;
+    padding: 10px;
+    margin: 20px auto 10px;
+    box-sizing: border-box;
+    transition: 0.4s;
+}
+
+.timezone-picker p {
+    margin: auto auto auto 5px;
+}
+
+.timezone-picker img {
+    transition: 0.5s;
+    margin: auto 5px auto auto;
+}
+
+.clicker {
+    display: none;
+    width: 20px;
+    padding: 10px 5px;
+}
+
+.check {
+    display: none;
+    width: 40px;
+}
+
+/* STARTs Save and Cancel Buttons*/
+.save, 
+.cancel {
+    color: white;
+    border: none;
+    width: 100%;
+    margin: 5px auto;
+}
+
+
+/* .widget-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -587,7 +807,8 @@ h3 {
 }
 
 .user-settings .message h3 {
-    padding-left: 50px;
+    text-align: center;
+    padding-top: 50px;
 }
 
 .message h3, .settings h3 {
@@ -621,12 +842,28 @@ h3 {
     padding-bottom: 15px;
     text-decoration: none;
     text-shadow: none;
-}
+} */
 
 /* ENDs Message User Widget*/
 
 
 /* STARTs Settings Container*/
+/* .settings {
+    display: grid;
+    padding: 10px;
+}
+
+.settings1 {
+    border-bottom: 1px solid 
+    #714fce;
+    border-bottom-color: rgb(113, 79, 206);
+    padding: 30px 0;
+}
+
+.settings1 h2 {
+    text-align: left;
+}
+
 .settings-container {
     color: rgb(119, 118, 118);
     display: flex;
@@ -696,7 +933,7 @@ h3 {
 
 .user-settings {
      flex-direction: column;
-}
+} */
 /* ENDs Settings Container*/
 
 
@@ -726,6 +963,16 @@ h3 {
         flex-direction: column;
         justify-content: flex-start;
         width: 65px;
+    }
+
+    .thin {
+        background-color: #00B9CB;
+        border: 1px solid #00B9CB;
+        height: 2px;
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .daily, 
