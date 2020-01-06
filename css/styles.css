@@ -37,10 +37,28 @@ a {
 h3 {
     text-transform: uppercase;
     margin-bottom: 10px;
+    color: rgb(119, 118, 118);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 25px 25px;
+    padding: 0 0 25px;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
 }
+
 
 .thin {
     display: none;
+}
+
+.thin2 {
+    background-color: #714fce;
+    border: 1px solid #714fce;
+    height: 2px;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
 }
 
 /* STARTs Main Header*/
@@ -385,7 +403,9 @@ h3 {
 
 .social-heading, 
 .members h3, 
-.recent-activity h3 {
+.recent-activity h3,
+.settings1 h3,
+.settings2 h3 {
     color: rgb(119, 118, 118);
     font-size: 20px;
     font-weight: 400;
@@ -579,9 +599,12 @@ h3 {
 
 
 /* STARTs SETTINGS*/
-.settings {
+#settings {
     display: grid;
-    padding: 10px;
+    margin: auto;
+    margin-top: auto;
+    width: 90%;
+    margin-top: 40px;
 }
 
 .settings1 {
@@ -593,6 +616,10 @@ h3 {
 .message-user-textarea {
     height: 100%;
     resize: none;
+}
+
+.messageHeadline {
+    margin-top: 10px;
 }
 
 .message-user-flex-container {
@@ -644,6 +671,7 @@ button, input, optgroup, select, textarea {
     padding: 10px;
     border-radius: 5px;
     transition: all 0.4s;
+    
 }
 
 element {
@@ -658,7 +686,7 @@ element {
 .send-btn {
     margin: 5px auto;
     width: 100%;
-    background: #714fce;
+    background: #00B9CB;
     border: none;
     color: white;
 }
@@ -667,7 +695,7 @@ element {
     padding: 30px 20px;
     color: white;
     border-bottom: 1px solid#714fce;
-    border-bottom-color: rgb(113, 79, 206);
+    border-bottom-color: #00B9CB;
 }
 
 .setting-options {
@@ -690,6 +718,11 @@ element {
     border-radius: 3px;
     box-sizing: border-box;
     transition: 0.8s;
+}
+
+.sendText {
+    text-align: center;
+    margin: auto;
 }
 
 input[type="checkbox"] {
