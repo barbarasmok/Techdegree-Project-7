@@ -8,6 +8,7 @@ body { min-height: 100%; }
 
 .grid-container {
     display: grid;
+    flex-wrap: wrap;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas:
@@ -51,6 +52,7 @@ h3 {
     align-items: center;
     background-color: #00B9CB;
     display: flex;
+    flex-wrap: wrap;
     grid-area: header;
     justify-content: space-between;
     padding: 0 20px;
@@ -72,6 +74,8 @@ h3 {
 .header .header-nav {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
 .header .header-nav .notifications svg {
@@ -127,9 +131,9 @@ h3 {
 .nav { 
     background-color: #1f0f26;
     display: flex;
+    flex-wrap: wrap;
     grid-area: nav; 
     justify-content: center;
-    width: 65px;
 }
 
 .activeNavItem {
@@ -152,12 +156,12 @@ h3 {
 
 .main { 
     grid-area: main; 
-    margin: 30px;
 }
 
 .main-tab {
     justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .main h2 {
@@ -174,9 +178,9 @@ h3 {
     align-items: center;
     background-color: rgba(214, 210, 210, 0.651);
     display: flex;
+    flex-wrap: wrap;
     height: 60px;
     justify-content: flex-end;
-    padding-right: 20px;
     width: 400%;
 }
 
@@ -189,12 +193,13 @@ h3 {
     height: 40px;
     line-height: 20px;
     padding: 10px 15px;
-    -webkit-appearance: none;
-    width: 40%;
+    width: 85%;
+    margin: auto;
 }
 
 .alert {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .alert-banner {
@@ -203,6 +208,7 @@ h3 {
     border-radius: 5px;
     color: #000;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
     margin-top: 20px;
@@ -229,6 +235,7 @@ h3 {
 .mainTab {
     justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .main h2 {
@@ -245,6 +252,7 @@ h3 {
     align-items: center;
     background-color: rgba(214, 210, 210, 0.651);
     display: flex;
+    flex-wrap: wrap;
     height: 60px;
     justify-content: flex-end;
     padding-right: 20px;
@@ -280,6 +288,7 @@ h3 {
 
 .traffic-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 30px;
 }
@@ -290,6 +299,7 @@ h3 {
 
 .traffic-nav {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .traffic-nav-link {
@@ -351,6 +361,7 @@ h3 {
 .social-image-google {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0% auto;
     margin: 0% auto;
@@ -376,6 +387,7 @@ h3 {
 .facebook-circle, 
 .google-circle {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     border-radius: 50%;
     background-color: rgb(116, 119, 189);
@@ -428,6 +440,7 @@ h3 {
 .members-container, 
 .recent-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -442,6 +455,7 @@ h3 {
 .recent-4  {
     border-bottom: 1px solid rgb(179, 179, 179);
     display:flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
     margin:  0 25px ;
@@ -487,6 +501,7 @@ h3 {
 /* STARTs Message User Widget*/
 .widget-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     margin: 20px 30px;
@@ -538,6 +553,7 @@ h3 {
 .settings-container {
     color: rgb(119, 118, 118);
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     margin: 0 30px; 
@@ -546,6 +562,7 @@ h3 {
 
 .settings-button {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between ;
 } 
 
@@ -577,11 +594,13 @@ h3 {
 
 .setting-content {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
 .switch-light {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 10px;
 }
 
@@ -625,8 +644,10 @@ h3 {
 
     .nav {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: flex-start;
+        width: 65px;
     }
 
     .daily, 
@@ -636,6 +657,7 @@ h3 {
     .message, 
     .settings {
         display: inline-block;
+        flex-wrap: wrap
     }
 
     .mobile {
@@ -684,6 +706,7 @@ h3 {
     .google-box {
         align-items: center;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         margin: 0 30px;
     }
@@ -695,11 +718,13 @@ h3 {
 
     .member-activity-container {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
     }
 
     .user-settings {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
     }
 
@@ -713,6 +738,7 @@ h3 {
 
     .setting-content {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         margin: 0 30px;
         padding-bottom: 30px;
@@ -727,6 +753,7 @@ h3 {
 @media (min-width: 1024px) {
     .socials {
         display: flex;
+        flex-wrap: wrap;
     }
 
     .grid-container {
