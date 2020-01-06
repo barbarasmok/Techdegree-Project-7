@@ -41,11 +41,11 @@ a {
 h3 {
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: rgb(119, 118, 118);
+    color: black;
     font-size: 20px;
     font-weight: 400;
     padding: 25px 25px;
-    padding: 0 0 25px;
+    /* padding: 0 0 25px; */
     margin: auto;
     text-align: center;
     margin-top: 50px;
@@ -57,9 +57,9 @@ h3 {
 }
 
 .thin2 {
-    background-color: #714fce;
-    border: 1px solid #714fce;
-    height: 2px;
+    background-color:  rgb(142, 90, 161);
+    border: 3px solid  rgb(142, 90, 161);
+    height: 4px;
     width: 80%;
     margin: auto;
     margin-top: 30px;
@@ -159,8 +159,8 @@ h3 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color: #363e4e;
-    padding: 10px;
+    background-color:  rgb(142, 90, 161);
+    padding: 15px;
 }
 
 .navlink-group {
@@ -188,7 +188,12 @@ a {
 
 .navlink svg {
     fill: white;
-    stroke-width: 1;
+    stroke-width: 3;
+}
+
+.navlink svg:hover {
+    fill: #363e4e;
+    stroke-width: 3;
 }
 /* ENDs Main Nav*/
 
@@ -199,10 +204,11 @@ a {
     grid-area: main; 
 }
 
-.main-tab {
+.flesh-dash {
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .main h2 {
@@ -227,7 +233,7 @@ a {
 .main .main-search input {
     appearance: none;
     border: 0;
-    border: 1px solid rgb(219, 219, 219);
+    border: 1px solid #ECECEC;
     border-radius: 4px;
     display: block;
     height: 40px;
@@ -251,11 +257,9 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
-    margin-top: 20px;
     margin-bottom: 40px;
-    padding: 5px 0;
-    width: 98%;
-    font-size: 11px;
+    width: 90%;
+    font-size: 10px;
 }
 
 .alert-banner-close {
@@ -319,14 +323,14 @@ a {
 
 /* STARTs Main Traffic*/
 
-.traffic {
+#traffic {
     color: rgb(119, 118, 118);
     display: block;
     font-size: 15px;
     font-weight: 700;
     justify-content: space-between;
     line-height: 30px;
-    padding: 15px 30px;
+    padding: 0 30px 15px;
 }
 
 .traffic-header {
@@ -336,7 +340,7 @@ a {
     padding-bottom: 30px;
 }
 
-.traffic h3 {
+.trafficHeadline {
     font-size: 20px;
     margin: auto;
     padding-bottom: 20px;
@@ -427,7 +431,7 @@ a {
 .recent-activity h3,
 .settings1 h3,
 .settings2 h3 {
-    color: rgb(119, 118, 118);
+    color: black;
     font-size: 20px;
     font-weight: 400;
     padding: 25px 25px;
@@ -438,10 +442,11 @@ a {
 
 .recent-activity h3 {
     margin-top: 40px;
+    color: black;
 }
 
 .social-name {
-    color: rgb(142, 90, 161);
+    color:  #00B9CB;
     font-size: 18px;
     margin-bottom: auto;
     line-height: 20px;
@@ -454,7 +459,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 50%;
-    background-color: rgb(116, 119, 189);
+    background-color: #00B9CB;
     width: 50px;
     height: 50px;
 } 
@@ -462,7 +467,7 @@ a {
 .twitter-box, 
 .facebook-box, 
 .google-box {
-    background-color: rgba(219, 219, 219, 0.65);
+    background-color: #ECECEC;
     border-radius: 5px;
     padding: 10px 10px;
 }
@@ -471,13 +476,14 @@ a {
 .facebook-box:hover, 
 .google-box:hover {
     background-color: rgba(279, 279, 279, 0.85);
+    transform: scale(1.05);
 }
 
 
 .number {
     color: rgb(119, 118, 118);
     font-weight: 600;
-    font-size: 38px;
+    font-size: 33px;
     line-height: 10px;
     margin: 15px;
 }
@@ -503,13 +509,17 @@ a {
     margin:  auto;
 }
 
-.members {
+#members {
     color: rgb(119, 118, 118);
     padding: 15px 25px;
     display:flex;
     flex-wrap: wrap;
     margin: auto;
     
+}
+
+.membersHeadline {
+    margin-top: 5px;
 }
 
 .recent-activity {
@@ -539,7 +549,7 @@ a {
     margin: auto;
     font-size: 13px;
     background-color: white;
-    padding: 0 5px;
+    padding: 5px 5px;
 }
 
 .member-1:hover, 
@@ -550,7 +560,8 @@ a {
 .recent-2:hover, 
 .recent-3:hover, 
 .recent-4:hover  {
-    background-color: rgba(231, 231, 231, 0.85);
+    background-color: #ECECEC;
+    transform: scale(1.05);
 }
 
 .member-1, 
@@ -565,7 +576,8 @@ a {
     border-bottom: none;
 }
 
-.date {
+.date,
+.hour {
     align-items: center;
     justify-content: flex-start;
     font-size: 10px;
@@ -574,10 +586,15 @@ a {
     flex-wrap: wrap;
 }
 
+.date {
+    margin-left: 0;
+}
+
 .names,
 .activityText {
     margin: 5px;
     font-size: 12px;
+    color: black;
 }
 
 .activityText {
@@ -586,6 +603,7 @@ a {
     font-size: 12px;
     margin: 8px;
     line-height: 1.1;
+    color: black;
 }
 
 .recent-container span {
@@ -599,7 +617,6 @@ a {
 .recent-activity img {
     align-content: center;
     border-radius: 50%;
-    width: 50px;
 }
 
 .arrowImg {
@@ -610,7 +627,7 @@ a {
 .memberImg {
     align-content: center;
     border-radius: 50%;
-    width: 50px;
+    width: 60px;
 }
 
 .member-activity-container {
@@ -657,7 +674,7 @@ a {
     margin: 5px auto;
     width: 100%;
     box-sizing: border-box;
-    background: rgb(219, 219, 219);
+    background:  #ECECEC;;
     color: black;
     padding: 10px;
 }
@@ -698,8 +715,8 @@ button, input, optgroup, select, textarea {
 
 
 * button:hover {
-    letter-spacing: 2px;
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 .send-btn {
@@ -750,11 +767,10 @@ input[type="checkbox"] {
     width: 60px;
     height: 20px;
     -webkit-appearance: none;
-    background: #3c454b;
+    background: rgb(142, 90, 161);
     outline: none;
     border-radius: 20px;
-    box-shadow: inset 0 0 5px
-    rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     transition: 0.4s;
 }
 
@@ -791,7 +807,7 @@ input:checked[type=checkbox]:before {
 
 * input, textarea {
     border-radius: 3px;
-    background-color: #ccc;
+    background-color: #ECECEC;
     border: none;
     outline: none;
     padding: 5px;
