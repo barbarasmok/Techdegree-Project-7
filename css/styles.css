@@ -73,6 +73,9 @@ ul {
     grid-area: header;
     justify-content: space-between;
     padding: 5px 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 0;
 }
 
 
@@ -151,13 +154,19 @@ ul {
 .nav {
     margin: auto;
 }
+
 .nav-icon-container {
     display: flex;
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    margin-top: 80px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     background-color: #0FFCE2;
     padding: 15px;
+    box-shadow: 5px 5px 30px rgba(59, 59, 59, 0.3);
 }
 
 .navlink-group {
@@ -200,7 +209,7 @@ a {
     text-align: center;
     width: 150px;
     height: 150px;
-    margin: 50px auto 0;
+    margin: 40px auto 0;
 }
 
 
@@ -209,6 +218,7 @@ a {
 .main { 
     grid-area: main;
     text-align: center; 
+    margin-top: 150px;
 }
 
 .flesh-dash {
