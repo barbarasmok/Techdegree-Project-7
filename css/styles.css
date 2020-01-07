@@ -28,7 +28,7 @@ p {
 }
 
 a {
-    color: rgb(142, 90, 161);
+    color: #0958D5;
     text-decoration: none;
     padding-left: 15px;
     font-size: 10px;
@@ -57,8 +57,8 @@ h3 {
 }
 
 .thin2 {
-    background-color:  rgb(142, 90, 161);
-    border: 3px solid  rgb(142, 90, 161);
+    background-color:  #0958D5;
+    border: 3px solid  #0958D5;
     height: 4px;
     width: 80%;
     margin: auto;
@@ -175,34 +175,43 @@ h3 {
 }
 
 .navlink {
-    width: 25px;
+    width: 35px;
     margin: auto 10px;
 }
 
 a {
     background-color: transparent;
-    color:rgb(142, 90, 161);
+    color:#0958D5;
     text-decoration: none;
     font-size: 10px;
 }
 
 .navlink svg {
-    fill: #363e4e;
+    fill: #0958D5;
     stroke-width: 3;
 }
 
 .navlink svg:hover {
-    fill: #0958D5;
+    fill: #000;
     stroke-width: 3;
 }
 
 /* ENDs Main Nav*/
 
 
+.logoImg {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin: 50px auto 0;
+}
+
+
 /* STARTs Main Search*/
 
 .main { 
-    grid-area: main; 
+    grid-area: main;
+    text-align: center; 
 }
 
 .flesh-dash {
@@ -249,24 +258,31 @@ a {
     flex-wrap: wrap;
 }
 
+.alertText {
+    margin: 0;
+    margin-left: 8px;
+    font-size: 12px;
+    padding: 0;
+}
+
 .alert-banner {
     align-items: center;
-    background-color: #53E8F7;
+    background-color: #0958D5;
     border-radius: 5px;
-    color: #000;
+    color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
     margin-bottom: 40px;
     width: 90%;
-    font-size: 10px;
+    
 }
 
 .alert-banner-close {
     cursor: pointer;
     float: right;
-    padding-right: 5px;
+    padding-right: 0;
 }
 /* ENDs Main Search*/
 
@@ -286,9 +302,9 @@ a {
 
 .main h2 {
     margin-top: 0;
-    color: #09aeb9;
-    font-size: 25px;
-    font-weight: 400;
+    color: #0958D5;
+    font-size: 40px;
+    font-weight: 900;
     height: 30px;
     line-height: 30px;
     padding: 25px 25px;
@@ -324,6 +340,11 @@ a {
 
 /* STARTs Main Traffic*/
 
+.widget-container-full {
+    margin: auto;
+    text-align: center;
+}
+
 #traffic {
     color: rgb(119, 118, 118);
     display: block;
@@ -331,7 +352,7 @@ a {
     font-weight: 700;
     justify-content: space-between;
     line-height: 30px;
-    padding: 0 30px 15px;
+    padding: 0 15px 0;
 }
 
 .traffic-header {
@@ -351,6 +372,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    list-style: none;
 }
 
 .traffic-nav-link {
@@ -446,7 +468,7 @@ a {
 }
 
 .social-name {
-    color:  #00B9CB;
+    color:  #0958D5;
     font-size: 18px;
     margin-bottom: auto;
     line-height: 20px;
@@ -459,7 +481,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 50%;
-    background-color: #00B9CB;
+    background-color: #0958D5;
     width: 50px;
     height: 50px;
 } 
@@ -470,6 +492,13 @@ a {
     background-color: #ECECEC;
     border-radius: 5px;
     padding: 10px 10px;
+}
+
+
+.social-text,
+.facebook-text,
+.google-text {
+    text-align: left;
 }
 
 .twitter-box:hover, 
@@ -595,6 +624,7 @@ a {
     margin: 5px;
     font-size: 12px;
     color: black;
+    text-align: left;
 }
 
 .activityText {
@@ -722,16 +752,16 @@ button, input, optgroup, select, textarea {
 .send-btn {
     margin: 5px auto;
     width: 100%;
-    background: #00B9CB;
+    background: #0FFCE2;
     border: none;
-    color: white;
+    color: black;
 }
 
 .settings2 {
     padding: 30px 20px;
     color: white;
-    border-bottom: 1px solid#714fce;
-    border-bottom-color: #00B9CB;
+    border-bottom: 1px solid #0958D5;
+    border-bottom-color: #0FFCE2;
 }
 
 .setting-options {
@@ -767,7 +797,7 @@ input[type="checkbox"] {
     width: 60px;
     height: 20px;
     -webkit-appearance: none;
-    background: rgb(142, 90, 161);
+    background: #0958D5;
     outline: none;
     border-radius: 20px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
@@ -784,7 +814,7 @@ input[type=checkbox]:hover {
 }
   
 input:checked[type=checkbox] {
-    background: #00B9CB;
+    background: #0FFCE2;
 }
   
 input[type=checkbox]:before {
@@ -820,6 +850,7 @@ input:checked[type=checkbox]:before {
     padding-bottom: 5px;
     margin-bottom: 10px;
     width: 100%;
+    text-align: center;
 }
 
 .form-area {
@@ -831,18 +862,19 @@ input:checked[type=checkbox]:before {
 /* STARTs Save and Cancel Buttons*/
 .save, 
 .cancel {
-    color: white;
     border: none;
     width: 100%;
     margin: 5px auto;
 }
 
 .save {
-    background-color: #00B9CB;
+    background-color: #0FFCE2;
+    color: black;
 }
 
 .cancel {
-    background-color: rgb(142, 90, 161);
+    background-color: #0958D5;
+    color: white;
 }
 
 
@@ -879,8 +911,8 @@ input:checked[type=checkbox]:before {
     }
 
     .thin {
-        background-color: #00B9CB;
-        border: 1px solid #00B9CB;
+        background-color: #0FFCE2;
+        border: 1px solid #0FFCE2;
         height: 2px;
         width: 90%;
         margin: auto;
