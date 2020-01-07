@@ -90,9 +90,7 @@ ul {
     color: #FFF;
     font-family: 'Lato', serif;
     font-size: 25px;
-    font-weight: 400;
     height: 40px;
-    line-height: 40px;
 }
 
 .header .header-logo h1 span {
@@ -402,38 +400,50 @@ a {
 
 
 /* STARTs Daily Traffic*/
+.widget-container-half {
+    margin: 10px;
+}
+
 .daily {
     padding: 15px 25px;
 }
 .daily, 
 .mobile {
     align-items: center;
-    color: rgb(119, 118, 118);
+    color: black;
     padding-bottom: 30px;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-right: 5px;
     padding-left: 5px;
 }
 
 .mobile {
+    padding-top: 10px;
 }
 
 .daily-heading,
 .mobile-heading {
-    color: rgb(119, 118, 118);
-    font-size: 20px;
-    font-weight: 400;
-    padding-bottom: 40px;
+    font-size: 25px;
     margin: auto;
-    text-align: center;
+    padding-bottom: 20px;
+    color:#0958D5;
+}
+
+.mobile-heading {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 
-
 /* STARTs Mobile Chart*/
+.mobile-users-container {
+    margin: 10px;
+}
+
 .mobileChart {
     align-items: center;
-    color: rgb(119, 118, 118);
+    color: black;
     padding-bottom: 30px;
     border-top: 1px solid lightgray;
 }
@@ -482,7 +492,7 @@ a {
 }
 
 .recent-activity h3 {
-    margin-top: 40px;
+    margin-top: 10px;
     color: black;
 }
 
