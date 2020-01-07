@@ -65,6 +65,10 @@ h3 {
     margin-top: 30px;
 }
 
+ul {
+    padding-left: 0;
+}
+
 /* STARTs Main Header*/
 .header {
     align-items: center;
@@ -346,13 +350,14 @@ a {
 }
 
 #traffic {
-    color: rgb(119, 118, 118);
+    color: black;
     display: block;
     font-size: 15px;
     font-weight: 700;
     justify-content: space-between;
     line-height: 30px;
     padding: 0 15px 0;
+    text-align: center;
 }
 
 .traffic-header {
@@ -363,9 +368,10 @@ a {
 }
 
 .trafficHeadline {
-    font-size: 20px;
+    font-size: 25px;
     margin: auto;
     padding-bottom: 20px;
+    color:#0958D5;
 }
 
 .traffic-nav {
@@ -376,9 +382,22 @@ a {
 }
 
 .traffic-nav-link {
-    padding-right: 20px;
+    padding: 2px 10px;
     font-size: 12px;
+    text-align: center;
 }
+
+.traffic-nav-link:hover {
+    color: black;
+    background-color: #0FFCE2;
+    border-radius: 5%;
+}
+
+.traffic-nav-link:active {
+    color: black;
+    background-color: #0FFCE2;
+    border-radius: 5%;
+} 
 /* ENDs Main Traffic*/
 
 
@@ -1077,7 +1096,7 @@ input:checked[type=checkbox]:before {
 
     .members {
         grid-template-columns: repeat(2, 1fr);
-        border-bottom: 1px solid $default;
+        border-bottom: 1px solid;
     }
     .settings {
         grid-template-columns: repeat(2, 1fr);
