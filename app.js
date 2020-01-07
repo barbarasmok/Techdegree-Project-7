@@ -249,7 +249,6 @@ send.addEventListener('click', (e) => {
 });
 // ENDs Set up Mobile Chart //
 
-
 // TIMEZONE OVERLAY
 $(".timezone-picker").on("click", function() {
     $(".overlay").fadeIn();

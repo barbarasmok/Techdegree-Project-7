@@ -284,7 +284,6 @@ a {
     margin: auto;
     margin-bottom: 40px;
     width: 90%;
-    
 }
 
 .alert-banner-close {
@@ -778,7 +777,7 @@ button, input, optgroup, select, textarea {
     margin: 0;
 }
 
-* button {
+button {
     width: auto;
     text-transform: uppercase;
     outline: none;
@@ -789,7 +788,7 @@ button, input, optgroup, select, textarea {
 }
 
 
-* button:hover {
+button:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
@@ -929,10 +928,9 @@ input:checked[type=checkbox]:before {
 /* STARTs Media Queries */
 @media (min-width: 768px) {
     .grid-container {
-        grid-template-columns: 55px 1fr;
-        grid-template-areas:
-        "header header"
-        "nav main";
+        grid-template-columns: 100%;
+        grid-template-rows: 60px 60px 1fr;
+        grid-template-areas: "header" "nav" "main";
     }
 
     .header .header-nav .name {
@@ -940,13 +938,15 @@ input:checked[type=checkbox]:before {
     }
 
     .main {
-        grid-template-columns: 50%;
         margin-top: -10px;
     }
 
     .main .main-search {
         grid-template-columns: 50%;
-        background-color: rgba(214, 210, 210, 0.651);
+    }
+
+    .logoImg {
+        margin-top: 80px;
     }
 
     .nav {
@@ -955,6 +955,12 @@ input:checked[type=checkbox]:before {
         flex-direction: column;
         justify-content: flex-start;
         width: 65px;
+        z-index: 1000;
+    }
+
+    .navlink {
+        width: 30px;
+        margin: auto 30px;
     }
 
     .thin {
@@ -974,12 +980,13 @@ input:checked[type=checkbox]:before {
     .message, 
     .settings {
         display: inline-block;
-        flex-wrap: wrap
+        flex-wrap: wrap;
     }
+
 
     .mobile {
         border-top: none;
-        border-left: 1px solid lightgray;
+        border-left: none;
     }
 
     .traffic-chart, 
@@ -987,15 +994,33 @@ input:checked[type=checkbox]:before {
         grid-column: 1 / span 2;
     }
 
+    .socials {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .social-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    .social-handles {
+        margin: 10px 20px;
+    }
+    
+
     .daily, 
-    .members, 
+    #members, 
     .message {
         grid-column: 1 / span 1;
     }
 
-    .members {
-        border-right: 1px solid rgb(116,116,116);
+    .memberImg {
+        width: 80px;
     }
+    
 
     .member-1, 
     .member-2, 
@@ -1036,11 +1061,6 @@ input:checked[type=checkbox]:before {
         width: 45vw;
     }
 
-    .social-container {
-        flex: 1;
-        justify-content: space-evenly;
-    }
-
     .twitter-box, 
     .facebook-box, 
     .google-box {
@@ -1051,7 +1071,7 @@ input:checked[type=checkbox]:before {
         margin: 0 30px;
     }
 
-    .members, 
+    #members, 
     .recent-activity {
         flex: 1;
     }
@@ -1072,10 +1092,6 @@ input:checked[type=checkbox]:before {
         flex: 1;
     }
 
-    .settings {
-        border-left: 1px solid rgb(144, 142, 152);
-    }
-
     .setting-content {
         display: flex;
         flex-wrap: wrap;
@@ -1094,6 +1110,14 @@ input:checked[type=checkbox]:before {
     .socials {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    #settings {
+        border-left: 1px solid rgb(144, 142, 152);
+    }
+
+    #members {
+        border-right: 1px solid rgb(116,116,116);
     }
 
     .grid-container {
@@ -1122,20 +1146,18 @@ input:checked[type=checkbox]:before {
         grid-template-columns: 50%;
     }
 
-    .members {
+    #members {
         grid-template-columns: repeat(2, 1fr);
         border-bottom: 1px solid;
     }
-    .settings {
+    #settings {
         grid-template-columns: repeat(2, 1fr);
     }
     .nav-icon-container {
         height: 100%;
-        @include flexCol;
         justify-content: space-between;
     }
     .navlink-group {
-        @include flexCol;
         justify-content: space-evenly;
     }
     .navlink {
