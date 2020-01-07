@@ -43,7 +43,7 @@ h3 {
     font-size: 25px;
     margin: 50px auto 10px;
     padding-bottom: 20px;
-    color:#0958D5;
+    color:#011533;
 }
 
 
@@ -52,8 +52,8 @@ h3 {
 }
 
 .thin2 {
-    background-color:  #0958D5;
-    border: 3px solid  #0958D5;
+    background-color:  #011533;
+    border: 3px solid  #011533;
     height: 4px;
     width: 80%;
     margin: auto;
@@ -164,7 +164,7 @@ ul {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color: #0FFCE2;
+    background-color: #011533;
     padding: 15px;
     box-shadow: 5px 5px 30px rgba(59, 59, 59, 0.3);
 }
@@ -193,12 +193,12 @@ a {
 }
 
 .navlink svg {
-    fill: #0958D5;
+    fill: #0FFCE2;
     stroke-width: 3;
 }
 
 .navlink svg:hover {
-    fill: #000;
+    fill: #0958D5;
     stroke-width: 3;
 }
 
@@ -374,7 +374,7 @@ a {
     font-size: 25px;
     margin: auto;
     padding-bottom: 20px;
-    color:#0958D5;
+    color:#011533;
 }
 
 .traffic-nav {
@@ -431,7 +431,7 @@ a {
     font-size: 25px;
     margin: auto;
     padding-bottom: 20px;
-    color:#0958D5;
+    color:#011533;
 }
 
 .mobile-heading {
@@ -490,7 +490,7 @@ a {
     font-size: 25px;
     margin: auto;
     padding-bottom: 20px;
-    color:#0958D5;
+    color:#011533;
 }
 
 .recent-activity h3 {
@@ -580,7 +580,7 @@ a {
     font-size: 25px;
     margin: auto;
     padding-bottom: 20px;
-    color:#0958D5;
+    color:#011533;
 }
 
 .recent-activity {
@@ -713,7 +713,7 @@ a {
     font-size: 25px;
     margin: auto;
     padding-bottom: 20px;
-    color:#0958D5;
+    color:#011533;
 }
 
 .settings1 {
@@ -732,7 +732,7 @@ a {
     font-size: 25px;
     margin: auto;
     padding-bottom: 20px;
-    color:#0958D5;
+    color:#011533;
 }
 
 .message-user-flex-container {
