@@ -68,12 +68,12 @@ h3 {
 /* STARTs Main Header*/
 .header {
     align-items: center;
-    background-color: #00B9CB;
+    background-color: #0958D5;
     display: flex;
     flex-wrap: wrap;
     grid-area: header;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 5px 0;
 }
 
 
@@ -109,11 +109,11 @@ h3 {
 }
 
 .header .header-nav .divider {
-    background-color: rgba(0,0,0,0.2);
+    background-color:white;
     display: block;
-    height: 50px;
+    height: 30px;
     margin: 0 20px;
-    width: 1px;
+    width: 2px;
 }
 
 .header .header-nav .profile img{
@@ -131,9 +131,9 @@ h3 {
 }
 
 .header .header-nav .name {
-    padding-left: 10px;
-    color: #FFF;
-    font-family: 'Lato', serif;
+    display: none;
+    color: white;
+    margin: auto 10px;
 }
 
 .header .icon-fill {
@@ -159,7 +159,7 @@ h3 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color:  rgb(142, 90, 161);
+    background-color: #0FFCE2;
     padding: 15px;
 }
 
@@ -187,14 +187,15 @@ a {
 }
 
 .navlink svg {
-    fill: white;
+    fill: #363e4e;
     stroke-width: 3;
 }
 
 .navlink svg:hover {
-    fill: #363e4e;
+    fill: #0958D5;
     stroke-width: 3;
 }
+
 /* ENDs Main Nav*/
 
 
@@ -356,7 +357,6 @@ a {
     padding-right: 20px;
     font-size: 12px;
 }
-
 /* ENDs Main Traffic*/
 
 
@@ -854,6 +854,10 @@ input:checked[type=checkbox]:before {
         grid-template-areas:
         "header header"
         "nav main";
+    }
+
+    .header .header-nav .name {
+        display: initial;
     }
 
     .main {

@@ -1,0 +1,13 @@
+// IMPORT UTILITIES
+@import 'utilities/variables',
+        'utilities/mixins';
+
+// IMPORT COMPONENTS
+// grid items
+@import 'components/griditems/gridcontent',
+        'components/griditems/header',
+        'components/griditems/nav';
+
+// IMPORT MEDIA QUERIES 
+@import 'mediaqueries/tablet',
+        'mediaqueries/desktop';
