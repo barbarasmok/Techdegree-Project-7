@@ -31,7 +31,7 @@ a {
     color: #0958D5;
     text-decoration: none;
     padding-left: 15px;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .navA {
@@ -40,15 +40,10 @@ a {
 
 h3 {
     text-transform: uppercase;
-    margin-bottom: 10px;
-    color: black;
-    font-size: 20px;
-    font-weight: 400;
-    padding: 25px 25px;
-    /* padding: 0 0 25px; */
+    font-size: 25px;
     margin: auto;
-    text-align: center;
-    margin-top: 50px;
+    padding-bottom: 20px;
+    color:#0958D5;
 }
 
 
@@ -482,18 +477,14 @@ a {
 .recent-activity h3,
 .settings1 h3,
 .settings2 h3 {
-    color: black;
-    font-size: 20px;
-    font-weight: 400;
-    padding: 25px 25px;
-    padding: 0 0 25px;
+    font-size: 25px;
     margin: auto;
-    text-align: center;
+    padding-bottom: 20px;
+    color:#0958D5;
 }
 
 .recent-activity h3 {
     margin-top: 10px;
-    color: black;
 }
 
 .social-name {
@@ -578,6 +569,10 @@ a {
 
 .membersHeadline {
     margin-top: 5px;
+    font-size: 25px;
+    margin: auto;
+    padding-bottom: 20px;
+    color:#0958D5;
 }
 
 .recent-activity {
@@ -645,7 +640,7 @@ a {
 }
 
 .date {
-    margin-left: 0;
+    margin: 0;
 }
 
 .names,
@@ -718,6 +713,10 @@ a {
 
 .messageHeadline {
     margin-top: 10px;
+    font-size: 25px;
+    margin: auto;
+    padding-bottom: 20px;
+    color:#0958D5;
 }
 
 .message-user-flex-container {
