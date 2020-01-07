@@ -271,3 +271,5 @@ function closeTimeZones() {
       $(".grid-container").css("filter", "none");
     }, 500);
 }
+
+

@@ -214,7 +214,6 @@ a {
 
 
 /* STARTs Main Search*/
-
 .main { 
     grid-area: main;
     text-align: center; 
@@ -260,6 +259,8 @@ a {
     margin: auto;
 }
 
+/* STARTs Alert */
+
 .alert {
     display: flex;
     flex-wrap: wrap;
@@ -290,7 +291,7 @@ a {
     cursor: pointer;
     float: right;
     padding-right: 0;
-}
+} 
 /* ENDs Main Search*/
 
 
