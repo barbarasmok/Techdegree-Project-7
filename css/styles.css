@@ -717,8 +717,6 @@ a {
 }
 
 .settings1 {
-    border-bottom: 1px solid #714fce;
-    border-bottom-color: rgb(113, 79, 206);
     padding: 30px 0;
 }
 
@@ -804,8 +802,6 @@ button:hover {
 .settings2 {
     padding: 30px 20px;
     color: white;
-    border-bottom: 1px solid #0958D5;
-    border-bottom-color: #0FFCE2;
 }
 
 .setting-options {
@@ -835,6 +831,7 @@ button:hover {
     text-align: center;
     margin: auto;
     padding-left: 0;
+    color: black;
 }
 
 input[type="checkbox"] {
@@ -893,10 +890,12 @@ input:checked[type=checkbox]:before {
 /* STARTs Time Zone*/
 
 .form-field {
-    padding-bottom: 5px;
     margin-bottom: 10px;
+    padding: 10px;
+    border: none;
     width: 100%;
     text-align: center;
+    background-color: #ECECEC;
 }
 
 .form-area {
@@ -946,7 +945,11 @@ input:checked[type=checkbox]:before {
     }
 
     .logoImg {
-        margin-top: 80px;
+        margin-top: 30px;
+    }
+
+    .topText {
+        margin-top: 60px;
     }
 
     .nav {
@@ -961,6 +964,11 @@ input:checked[type=checkbox]:before {
     .navlink {
         width: 30px;
         margin: auto 30px;
+    }
+
+
+    .main h2 {
+        margin-bottom: 10px;
     }
 
     .thin {
@@ -990,24 +998,23 @@ input:checked[type=checkbox]:before {
     }
 
     .traffic-chart, 
-    .social {
+    #socials {
         grid-column: 1 / span 2;
     }
-
-    .socials {
+    
+    #socials {
         padding: 10px;
         box-sizing: border-box;
     }
 
     .social-container {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: space-evenly;
     }
 
-    .social-handles {
-        margin: 10px 20px;
+    .social-heading {
+        margin-top: 30px;
     }
     
 
@@ -1032,7 +1039,6 @@ input:checked[type=checkbox]:before {
     .recent-4  {
         border-bottom: 1px solid rgb(179, 179, 179);
     }
-
 
     .date {
         align-items: center;
@@ -1104,10 +1110,120 @@ input:checked[type=checkbox]:before {
     .settings-container {
         flex: 1;
     }
+
+    .setting-options {
+        flex-direction: column;
+    }
+
+    .sendText {
+        font-size: 18px;
+    }
+
+    .send-btn {
+        font-size: 18px;
+    }
 }
 
 @media (min-width: 1024px) {
-    .socials {
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+    }
+
+    .header {
+        background:#714fce;
+        grid-area: header;
+        grid-column-start: header;
+        grid-column-end: header;
+        z-index: 1100;
+        position: fixed;
+        width: 100vw;
+        box-shadow: 5px 5px 30px rgba(59, 59, 59, 0.6);
+        height: 65px;
+    }
+
+    h3,
+    .membersHeadline,
+    .trafficHeadline {
+        text-align: left;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .membersHeadline {
+        margin-left: 30px;
+    }
+
+
+    nav {
+        grid-column: 1/span 1;
+        grid-row: 2/span 2;
+        width: 55px;
+        height: 100vh;
+        box-sizing: border-box;
+        box-shadow: none;
+    }
+
+    .header .header-logo {
+        margin-left: 15px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .header .header-nav {
+        margin-right: 15px;
+        padding-top: 5px;
+        margin-top: 5px;
+    }
+
+    .header .header-logo h1 {
+        height: 0px;
+    }
+
+    .nav-icon-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 60px;
+        margin-top: 0;
+    }
+
+    .navlink-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav-clicked-slider-desktop {
+        display: initial;
+        transition: 0.4s;
+        position: absolute;
+        top: 13px;
+        left: 0px;
+        background: 
+        #714fce;
+        height: 45px;
+        width: 4px;
+        border-radius: 10px;
+    }
+
+    .navlink {
+        width: 30px;
+        margin: 10px auto;
+    }
+
+    .main {
+        grid-column: 2 / span 2;
+        grid-row: 2 /span 2;
+        grid-template-columns: 50%;
+    }
+
+    #traffic {
+        margin: 40px;
+        width: 90%;
+    }
+
+    #socials {
         display: flex;
         flex-wrap: wrap;
     }
@@ -1118,54 +1234,28 @@ input:checked[type=checkbox]:before {
 
     #members {
         border-right: 1px solid rgb(116,116,116);
-    }
-
-    .grid-container {
-        grid-template-columns: 55px 1fr;
-        grid-template-areas:
-            'header header'
-            'nav' 'main'
-    }
-
-    .header {
-        grid-column: 1 / span 2;
-    }
-
-    .nav {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 2;
-        width: 65px;
-        height: 100vh;
-        box-sizing: border-box;
-        box-shadow: none;
-    }
-
-    .main {
-        grid-column: 2 / span 2;
-        grid-row: 2 /span 2;
-        grid-template-columns: 50%;
-    }
-
-    #members {
         grid-template-columns: repeat(2, 1fr);
-        border-bottom: 1px solid;
+        
     }
+
+    .members-container {
+        margin-left: 0;
+    }
+
+    .member-4, .recent-4 {
+        border-bottom: none;
+    }
+    
+
     #settings {
         grid-template-columns: repeat(2, 1fr);
     }
-    .nav-icon-container {
-        height: 100%;
-        justify-content: space-between;
-    }
-    .navlink-group {
-        justify-content: space-evenly;
-    }
-    .navlink {
-        width: 30px;
-        margin: 10px auto;
-    }
 
+    .thin2 {
+        width: 90%;
+    }
     
+
 
 }
 
