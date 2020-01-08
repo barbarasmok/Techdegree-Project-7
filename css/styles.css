@@ -1005,6 +1005,7 @@ input:checked[type=checkbox]:before {
     #socials {
         padding: 10px;
         box-sizing: border-box;
+        display: flex;
     }
 
     .social-container {
@@ -1015,8 +1016,8 @@ input:checked[type=checkbox]:before {
 
     .social-heading {
         margin-top: 30px;
+        text-align: left;
     }
-    
 
     .daily, 
     #members, 
@@ -1067,16 +1068,17 @@ input:checked[type=checkbox]:before {
         width: 45vw;
     }
 
+    #socials {
+        width: 90%;
+        margin: 20px auto 0;
+    }
+
     .twitter-box, 
     .facebook-box, 
     .google-box {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 0 30px;
+        margin: 0 5px;
+    
     }
-
     #members, 
     .recent-activity {
         flex: 1;
@@ -1146,6 +1148,10 @@ input:checked[type=checkbox]:before {
         text-align: left;
         margin-left: 0;
         padding-left: 0;
+    }
+
+    .traffic-header {
+        margin-left: 40px;
     }
 
     .recentHeadline {
@@ -1218,8 +1224,17 @@ input:checked[type=checkbox]:before {
     }
 
     #traffic {
-        margin: 40px;
+        margin: 30px;
         width: 90%;
+    }
+
+    .traffic-nav {
+        margin-right: 0;
+    }
+
+    .traffic-nav-link {
+        font-size: 18px;
+        text-align: right;
     }
 
     #socials {
@@ -1228,7 +1243,9 @@ input:checked[type=checkbox]:before {
     }
 
     #settings {
-        border-left: 1px solid rgb(144, 142, 152);
+        margin: 30px;
+        width: 90%;
+
     }
 
     .member-activity-container {
@@ -1259,6 +1276,9 @@ input:checked[type=checkbox]:before {
         border-bottom: none;
     }
     
+    .recent-4 {
+        width: 95%;
+    }
 
     #settings {
         grid-template-columns: repeat(2, 1fr);
@@ -1279,6 +1299,36 @@ input:checked[type=checkbox]:before {
         margin: 0 5px;
     }
 
+    .widget-container-half {
+        padding: 20px;
+        width: 42.5vw;
+        box-sizing: border-box;
+        border: none;
+    }
+
+    .mobile-users-container {
+        margin: 0;
+    }
+
+    .daily-heading,
+    .mobile-heading {
+        text-align: center;
+    }
+
+    .settings1,
+    .settings2 {
+        margin-left: 30px;
+    }
+
+    .form-field {
+        margin-bottom: 10px;
+        padding: 15px 20px;
+        height: 40px;
+        border: none;
+        width: 100%;
+        text-align: center;
+        background-color: #ECECEC;
+    }
 
 }
 
