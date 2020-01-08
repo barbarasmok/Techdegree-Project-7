@@ -1268,8 +1268,8 @@ input:checked[type=checkbox]:before {
     .member-1, 
     .member-2, 
     .member-3, 
-    .member-4, {
-        margin-left: 0;
+    .member-4 {
+        margin: auto;
     }
 
     .member-4, .recent-4 {
@@ -1278,6 +1278,7 @@ input:checked[type=checkbox]:before {
     
     .recent-4 {
         width: 95%;
+        margin-left: 60px;
     }
 
     #settings {
