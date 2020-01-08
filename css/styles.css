@@ -1268,6 +1268,18 @@ input:checked[type=checkbox]:before {
     .member-1, 
     .member-2, 
     .member-3, 
+    .member-4, 
+    .recent-1, 
+    .recent-2, 
+    .recent-3, 
+    .recent-4  {
+        width: 100%;
+    }
+
+
+    .member-1, 
+    .member-2, 
+    .member-3, 
     .member-4 {
         margin: auto;
     }
@@ -1276,10 +1288,9 @@ input:checked[type=checkbox]:before {
         border-bottom: none;
     }
     
-    .recent-4 {
+    /*.recent-4 {
         width: 95%;
-        margin-left: 60px;
-    }
+    }*/
 
     #settings {
         grid-template-columns: repeat(2, 1fr);
