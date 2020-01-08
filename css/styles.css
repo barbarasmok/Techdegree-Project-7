@@ -1142,17 +1142,16 @@ input:checked[type=checkbox]:before {
     }
 
     h3,
-    .membersHeadline,
     .trafficHeadline {
         text-align: left;
         margin-left: 0;
         padding-left: 0;
     }
 
-    .membersHeadline {
-        margin-left: 30px;
+    .recentHeadline {
+        text-align: center;
     }
-
+  
 
     nav {
         grid-column: 1/span 1;
@@ -1232,13 +1231,27 @@ input:checked[type=checkbox]:before {
         border-left: 1px solid rgb(144, 142, 152);
     }
 
+    .member-activity-container {
+        width: 90%;
+    }
+
     #members {
         border-right: 1px solid rgb(116,116,116);
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);  
         
     }
 
+    .activity-container {
+        width: 70%;
+    }
     .members-container {
+        margin-left: 0;  
+    }
+
+    .member-1, 
+    .member-2, 
+    .member-3, 
+    .member-4, {
         margin-left: 0;
     }
 
@@ -1255,6 +1268,16 @@ input:checked[type=checkbox]:before {
         width: 90%;
     }
     
+    #socials {
+        width: 90%;
+        margin: 20px auto 0;
+    }
+
+    .twitter-box, 
+    .facebook-box, 
+    .google-box {
+        margin: 0 5px;
+    }
 
 
 }
