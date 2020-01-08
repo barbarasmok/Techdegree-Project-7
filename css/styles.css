@@ -521,7 +521,7 @@ a {
 .google-box {
     background-color: #ECECEC;
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 10px 50px;
 }
 
 
@@ -1143,7 +1143,6 @@ input:checked[type=checkbox]:before {
         height: 65px;
     }
 
-    h3,
     .trafficHeadline {
         text-align: left;
         margin-left: 0;
@@ -1242,10 +1241,22 @@ input:checked[type=checkbox]:before {
         flex-wrap: wrap;
     }
 
+    .socialHeader {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .social-container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
     #settings {
         margin: 30px;
         width: 90%;
-
     }
 
     .member-activity-container {
@@ -1340,6 +1351,10 @@ input:checked[type=checkbox]:before {
         width: 100%;
         text-align: center;
         background-color: #ECECEC;
+    }
+
+    .messageHeadline {
+        text-align: center;
     }
 
 }
