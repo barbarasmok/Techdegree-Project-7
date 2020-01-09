@@ -1,6 +1,53 @@
+const alertBanner = document.getElementById("alert");
+const notificationBell = document.getElementById('notificationBell');
+const notificationDiv = notificationBell.parentNode;
+const notificationTray = document.getElementById('notifications');
+
 const trafficCanvas = document.querySelector("#traffic-chart");
 const trafficNav = document.querySelector(".traffic-nav");
-const timeZoneChoice = {};
+const mobileCanvas = document.getElementById("mobile-users-chart");
+const dailyCanvas = document.getElementById("daily-chart");
+
+
+const user = document.getElementById('userField');
+const message = document.getElementById('messageField');
+const send = document.getElementById('send');
+
+let emailSetting = document.getElementById('email-check');
+let profileSetting = document.getElementById('profile-check');
+let timezoneSetting = document.getElementById('timezone');
+
+const saveButton = document.getElementById('save');
+const cancelButton = document.getElementById('cancel');
+
+//NOTIFICATION TRAY
+notificationBell.addEventListener('click', (e) => {
+    if (notificationTray.style.display === ""){
+        notificationTray.style.display = "block";
+    } else if (notificationTray.style.display === "block"){
+        notificationTray.style.display = "";
+    }
+})
+
+notificationTray.addEventListener('click', (e) => {
+    if(e.target.classList.contains('alert-banner-close')){
+        e.target.parentNode.style.display = 'none';
+    }
+});
+
+//ALERT BANNER
+alertBanner.innerHTML = 
+`
+<div class="alert-banner">
+<p class="alertText"><strong>Alert:</strong> You have <strong>2</strong> overdue tasks to complete</p>
+<p class="alert-banner-close">x</p>
+</div> `
+
+alertBanner.addEventListener('click', (e) => {
+    if(event.target.classList.contains('alert-banner-close')){
+        alertBanner.style.display = 'none';
+    }
+});
  
 // CHART INFORMATION
 // HOURLY
@@ -137,29 +184,8 @@ let trafficChart = new Chart(trafficCanvas, {
 // ENDs Set up Traffic Chart //
  
  
-// STARTs Set up Alert Banner //
-const alertBanner = document.getElementById("alert");
  
-alertBanner.innerHTML =
-`
-<div class="alert-banner">
-<p class="alertText"><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-<p class="alert-banner-close">x</p>
-</div> `
- 
-alertBanner.addEventListener('click', e => {
-    const element = e.target;
-    if (element.classList.contains("alert-banner-close")) {
-        alertBanner.style.display = "none"
-    }
-});
-// ENDs Set up Alert Banner //
- 
- 
- 
-// STARTs Set up Daily Chart //
-const dailyCanvas = document.getElementById("daily-chart");
- 
+// STARTs Set up Daily Chart // 
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{
@@ -197,8 +223,6 @@ const dailyData = {
  
  
 // STARTs Set up Mobile Chart //
-const mobileCanvas = document.getElementById("mobile-users-chart");
- 
 const mobileData = {
     labels: [
         "Desktop",
@@ -232,10 +256,8 @@ let mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
 });
  
-const user = document.getElementById('userField');
-const message = document.getElementById('messageField');
-const send = document.getElementById('send');
- 
+
+// FORM Settings //
 send.addEventListener('click', (e) => {
     if (user.value && message.value === "") {
         alert("This message and user field is empty. Please fill");
@@ -249,18 +271,84 @@ send.addEventListener('click', (e) => {
 });
 // ENDs Set up Mobile Chart //
 
-// TIMEZONE OVERLAY
-$(".timezone-picker").on("click", function() {
-    $(".overlay").fadeIn();
-    $(".timezone-overlay-container").slideDown();
-  });
-  $(".close-timezone").on("click", function() {
-    closeTimeZones();
-  });
+
+
+////////////////////
+// SETTINGS // 
+////////////////////
 
 
 
-//CLOSE TIMEZONE
+// TOOGLE SWITCHES //
+document.getElementById("email-checkbox").checked = checkedEmail;
+
+const checkedProfile = JSON.parse(localStorage.getItem("profile-checkbox"));
+document.getElementById("profile-checkbox").checked = checkedProfile;
+
+// Adding local storage //
+function saveEmailSettings() {
+    const emailCheckbox = document.getElementById("email-checkbox");
+    localStorage.setItem("email-checkbox", emailCheckbox.checked);
+}
+function saveProfileSettings() {
+    const profileCheckbox = document.getElementById("profile-checkbox");
+    localStorage.setItem("profile-checkbox", profileCheckbox.checked);
+}
+
+// Functionality
+$(".email-check").change(function() {
+    if (
+      $(this)
+        .parent()
+        .hasClass("input-default")
+    ) {
+      $(this)
+        .parent()
+        .removeClass("input-default");
+      $(this)
+        .parent()
+        .addClass("input-active");
+    } else if (
+      $(this)
+        .parent()
+        .hasClass("input-active")
+    ) {
+      $(this)
+        .parent()
+        .removeClass("input-active");
+      $(this)
+        .parent()
+        .addClass("input-default");
+    }
+});
+
+$(".profile-check").change(function() {
+    if (
+      $(this)
+        .parent()
+        .hasClass("input-default")
+    ) {
+      $(this)
+        .parent()
+        .removeClass("input-default");
+      $(this)
+        .parent()
+        .addClass("input-active");
+    } else if (
+      $(this)
+        .parent()
+        .hasClass("input-active")
+    ) {
+      $(this)
+        .parent()
+        .removeClass("input-active");
+      $(this)
+        .parent()
+        .addClass("input-default");
+    }
+});
+
+//Timezone close function
 function closeTimeZones() {
     window.setTimeout(function() {
       $(".overlay").fadeOut();
@@ -270,5 +358,7 @@ function closeTimeZones() {
       $(".grid-container").css("filter", "none");
     }, 500);
 }
+
+//Message User Container
 
 
