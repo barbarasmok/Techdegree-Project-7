@@ -19,7 +19,7 @@ const userList = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 
 let emailSetting = document.getElementById('email-checkbox');
 let profileSetting = document.getElementById('profile-checkbox');
-let timezoneSetting = document.getElementById('timezoneStorage');
+let timezoneSetting = document.querySelector('.timezoneStorage');
 
 const saveButton = document.getElementById('save');
 const cancelButton = document.getElementById('cancel');
@@ -316,7 +316,7 @@ settingsAlert.addEventListener('click', (e) => {
 
 emailSetting.checked = JSON.parse(localStorage.getItem('email'));
 profileSetting.checked = JSON.parse(localStorage.getItem('profile'));
-timezoneSetting.value = localStorage.getItem('timezoneStorage');
+timezoneSetting.value = localStorage.getItem('.timezoneStorage');
 
 
 // Set up Toogle Switches //
