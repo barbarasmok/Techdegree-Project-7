@@ -296,14 +296,14 @@ saveButton.addEventListener('click', (e) => {
     localStorage.setItem('email', isEmailChecked);
     localStorage.setItem('profile', isProfileSettingChecked);
     localStorage.setItem('timezone', timezoneSettingSelected);
-    settingsAlert.innerHTML='<div class="alertBanner"><p class="saveAlertText">Settings Saved!</p><p class="alert-banner-close">X</p></div>';
+    settingsAlert.innerHTML='<div class="alertBanner"><p class="saveAlertText">Settings Saved!</p><p class="alert-banner-close-save">X</p></div>';
 });
 
 cancelButton.addEventListener('click', (e) => {
     localStorage.setItem('email', false);
     localStorage.setItem('profile', false);
     localStorage.setItem('timezone', "00000");
-    settingsAlert.innerHTML='<div class="alertBanner"><p class="saveAlertText">Settings Reset.</p><p class="alert-banner-close">X</p></div>';
+    settingsAlert.innerHTML='<div class="alertBanner"><p class="saveAlertText">Settings Reset.</p><p class="alert-banner-close-cancel">X</p></div>';
 });
 
 settingsAlert.addEventListener('click', (e) => {
