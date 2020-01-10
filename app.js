@@ -14,6 +14,7 @@ const dailyCanvas = document.getElementById("daily-chart");
 const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
+const alert = document.getElementById('messageSent');
 const userList = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 
 let emailSetting = document.getElementById('email-check');
@@ -32,11 +33,11 @@ notificationBell.addEventListener('click', (e) => {
     }
 })
 
-// notificationTray.addEventListener('click', (e) => {
-//     if(e.target.classList.contains('alert-banner-close')){
-//         e.target.parentNode.style.display = 'none';
-//     }
-// });
+notificationTray.addEventListener('click', (e) => {
+     if(e.target.classList.contains('alert-banner-close')){
+         e.target.parentNode.style.display = 'none';
+     }
+});
 
 //Alert Banner
 alertBanner.innerHTML = 
@@ -46,11 +47,11 @@ alertBanner.innerHTML =
 <p class="alert-banner-close">x</p>
 </div> `
 
-// alertBanner.addEventListener('click', (e) => {
-//     if(event.target.classList.contains('alert-banner-close')){
-//         alertBanner.style.display = 'none';
-//     }
-// });
+alertBanner.addEventListener('click', (e) => {
+     if(event.target.classList.contains('alert-banner-close')){
+         alertBanner.style.display = 'none';
+    }
+ });
  
 // Charts
 // HOURLY
@@ -279,11 +280,11 @@ send.addEventListener('click', (e) => {
 
 });
 
-// alert.addEventListener('click', (e) => {
-//     if(event.target.classList.contains('alert-banner-close')){
-//         alert.innerHTML="";
-//     }
-// });
+alert.addEventListener('click', (e) => {
+     if(event.target.classList.contains('alert-banner-close')){
+         alert.innerHTML="";
+    }
+});
 
 
 //Set up Local Storage Save + Cancel Buttons
