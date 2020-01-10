@@ -13,7 +13,7 @@ const dailyCanvas = document.getElementById("daily-chart");
 
 const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
-const send = document.getElementById('send');
+const send = document.getElementById('send-btn');
 const userList = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 
 let emailSetting = document.getElementById('email-check');
