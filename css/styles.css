@@ -150,7 +150,7 @@ ul {
 #notifications {
     background-color:#011533;
     position: absolute;
-    top: 65px;
+    top: 140px;
     display: none;
     margin-right: 180px;
     color: white;
@@ -985,6 +985,12 @@ input:checked[type=checkbox]:before {
         margin-top: 60px;
     }
 
+    #notifications{
+        top: 140px;
+        margin-right: 0;
+    }
+
+
     .nav {
         display: flex;
         flex-wrap: wrap;
@@ -1102,14 +1108,28 @@ input:checked[type=checkbox]:before {
     }
 
     #socials {
-        width: 90%;
-        margin: 20px auto 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .socialHeader {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .social-container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .twitter-box, 
     .facebook-box, 
     .google-box {
         margin: 0 5px;
+        padding: 10px 10px;
     
     }
     #members, 
@@ -1156,11 +1176,6 @@ input:checked[type=checkbox]:before {
 
     .send-btn {
         font-size: 18px;
-    }
-
-    #notifications {
-        top: 65px;
-        right: 0;
     }
     .notificationAlert{
         width: 300px;
@@ -1221,6 +1236,40 @@ input:checked[type=checkbox]:before {
 
     .header .header-logo h1 {
         height: 0px;
+    }
+
+    .notifications {
+        width: 40px;
+        position: relative;
+    }
+    
+    #notificationBell{
+        transition: transform 0.5s;
+    }
+    
+    #notificationBell:hover {
+        /* transform: scale(1.2); */
+        transform: scale(1.2) rotate(-15deg);
+    }
+    
+    #notifications {
+        background-color:#011533;
+        position: absolute;
+        top: 65px;
+        display: none;
+        margin-right: 180px;
+        color: white;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 10px;
+    }
+    
+    .notificationText {
+        width: 70%;
+        margin-left: 8px;
+        font-size: 12px;
+        padding: 0;
+        float: left;
     }
 
     .nav-icon-container {
