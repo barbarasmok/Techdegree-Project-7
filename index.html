@@ -318,7 +318,8 @@
                     <div class="message-user-flex-container">
                         <input class="message-user-input" type="search" placeholder="search for user" id="userField">
                         <textarea class="message-user-textarea" placeholder="message for user" id="messageField"></textarea>        
-                        <button class="send-btn">send</button>
+                        <button class="send-btn" id="send">send</button>
+                        <div id="messageSent"></div>
                     </div>
                 </div>
 
@@ -326,14 +327,16 @@
                 <div class="settings2">
                     <h3>settings</h3>
                     <div class="setting-options">
-                        <div class="settings-flex input-default">
-                            <p class="sendText">Send Email Notifications</p>
-                            <input class="email-check" id="email-checkbox" type="checkbox">
-                        </div>
-                        <div class="settings-flex input-default">
-                            <p class="sendText">Set Profile To Public</p>
-                            <input class="profile-check" id="profile-checkbox" type="checkbox">
-                        </div>
+                        <form id="messageUserForm">
+                            <div class="settings-flex input-default">
+                                <p class="sendText">Send Email Notifications</p>
+                                <input class="email-check" id="email-checkbox" type="checkbox">
+                            </div>
+                            <div class="settings-flex input-default">
+                                <p class="sendText">Set Profile To Public</p>
+                                <input class="profile-check" id="profile-checkbox" type="checkbox">
+                            </div>
+                        </form>
                     </div>
                     <select class="form-field" id="timezone">
                         <option disabled selected>Select a Timezone</option>
@@ -347,6 +350,7 @@
                         <button class="save">save</button>
                         <button class="cancel">cancel</button>
                     </div>
+                    <div id="settingsAlert"></div>
                 </div>
             </section>
         </main> <!-- ENDs Main Container -->
