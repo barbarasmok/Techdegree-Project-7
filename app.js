@@ -1,4 +1,6 @@
 const alertBanner = document.getElementById("alert");
+const settingsAlert = document.getElementById('settingsAlert');
+
 const notificationBell = document.getElementById('notificationBell');
 const notificationDiv = notificationBell.parentNode;
 const notificationTray = document.getElementById('notifications');
@@ -12,6 +14,7 @@ const dailyCanvas = document.getElementById("daily-chart");
 const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
+const userList = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 
 let emailSetting = document.getElementById('email-check');
 let profileSetting = document.getElementById('profile-check');
@@ -20,7 +23,7 @@ let timezoneSetting = document.getElementById('timezone');
 const saveButton = document.getElementById('save');
 const cancelButton = document.getElementById('cancel');
 
-//NOTIFICATION TRAY
+//Notification Tray
 notificationBell.addEventListener('click', (e) => {
     if (notificationTray.style.display === ""){
         notificationTray.style.display = "block";
@@ -35,7 +38,7 @@ notificationTray.addEventListener('click', (e) => {
     }
 });
 
-//ALERT BANNER
+//Alert Banner
 alertBanner.innerHTML = 
 `
 <div class="alert-banner">
@@ -49,7 +52,7 @@ alertBanner.addEventListener('click', (e) => {
     }
 });
  
-// CHART INFORMATION
+// Charts
 // HOURLY
 const hourlyData = [750, 1250, 825, 1400, 2000, 1400, 1750, 1250, 1750, 2250, 1750, 2250];
 const hourlyLabels = [
@@ -109,7 +112,7 @@ const monthlyLabels = [
     "DEC"
 ];
  
-// STARTs Set up Traffic Chart Functions //
+// Set up Traffic Chart Functions //
  
 const updateChart = activity => {
     // code to be executed
@@ -181,11 +184,11 @@ let trafficChart = new Chart(trafficCanvas, {
     data: trafficData,
     options: trafficOptions
 });
-// ENDs Set up Traffic Chart //
+
  
  
  
-// STARTs Set up Daily Chart // 
+// Set up Daily Chart // 
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{
@@ -219,10 +222,10 @@ const dailyData = {
         data: dailyData,
         options: dailyOptions
 });
-// ENDs Set up Daily Chart //
+
  
  
-// STARTs Set up Mobile Chart //
+// Set up Mobile Chart //
 const mobileData = {
     labels: [
         "Desktop",
@@ -257,98 +260,69 @@ let mobileChart = new Chart(mobileCanvas, {
 });
  
 
-// FORM Settings //
+// Set up FORM Settings - Message User //
+$('#userField').autocomplete({
+    source: userList,
+});
+
 send.addEventListener('click', (e) => {
-    if (user.value && message.value === "") {
-        alert("This message and user field is empty. Please fill");
-    } else if (user.value === "") {
-        alert("Fill message before pressing send");
-    } else if (message.value === "") {
-        alert("Fill uer field before pressing send");
+    e.preventDefault();
+    if (user.value === '' && message.value === ''){
+        alert.innerHTML = '<div class="errorAlert"><p>User field cannot be empty. Message field cannot be empty.</p><p class="alert-banner-close">X</p></div>';
+    } else if (user.value === ''){
+        alert.innerHTML = '<div class="errorAlert"><p>User field cannot be empty.</p><p class="alert-banner-close">X</p></div>';
+    } else if (message.value === '') {
+        alert.innerHTML = '<div class="errorAlert"><p>Message field cannot be empty.</p><p class="alert-banner-close">X</p></div>';
     } else {
-        alert("Message was sent");
+        alert.innerHTML = '<div class="alertBanner"><p>Message sent.</p><p class="alert-banner-close">X</p></div>';
     }
 });
-// ENDs Set up Mobile Chart //
+
+alert.addEventListener('click', (e) => {
+    if(event.target.classList.contains('alert-banner-close')){
+        alert.innerHTML="";
+    }
+});
 
 
+//Set up Local Storage Save + Cancel Buttons
+saveButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    let isEmailChecked = emailSetting.checked;
+    let isProfileSettingChecked = profileSetting.checked;
+    let timezoneSettingSelected = timezoneSetting.value;
+    localStorage.setItem('email', isEmailChecked);
+    localStorage.setItem('profile', isProfileSettingChecked);
+    localStorage.setItem('timezone', timezoneSettingSelected);
+    settingsAlert.innerHTML='<div class="alertBanner"><p>Settings Saved!</p><p class="alert-banner-close">X</p></div>';
+});
 
-////////////////////
-// SETTINGS // 
-////////////////////
+cancelButton.addEventListener('click', (e) => {
+    localStorage.setItem('email', false);
+    localStorage.setItem('profile', false);
+    localStorage.setItem('timezone', "00000");
+    settingsAlert.innerHTML='<div class="alertBanner"><p>Settings Reset.</p><p class="alert-banner-close">X</p></div>';
+});
+
+settingsAlert.addEventListener('click', (e) => {
+    if(e.target.classList.contains('alert-banner-close')){
+        settingsAlert.innerHTML="";
+    }
+})
+
+emailSetting.checked = JSON.parse(localStorage.getItem('email'));
+profileSetting.checked = JSON.parse(localStorage.getItem('profile'));
+timezoneSetting.value = localStorage.getItem('timezone');
 
 
-
-// TOOGLE SWITCHES //
+// Set up Toogle Switches //
 document.getElementById("email-checkbox").checked = checkedEmail;
 
 const checkedProfile = JSON.parse(localStorage.getItem("profile-checkbox"));
 document.getElementById("profile-checkbox").checked = checkedProfile;
 
-// Adding local storage //
-function saveEmailSettings() {
-    const emailCheckbox = document.getElementById("email-checkbox");
-    localStorage.setItem("email-checkbox", emailCheckbox.checked);
-}
-function saveProfileSettings() {
-    const profileCheckbox = document.getElementById("profile-checkbox");
-    localStorage.setItem("profile-checkbox", profileCheckbox.checked);
-}
 
-// Functionality
-$(".email-check").change(function() {
-    if (
-      $(this)
-        .parent()
-        .hasClass("input-default")
-    ) {
-      $(this)
-        .parent()
-        .removeClass("input-default");
-      $(this)
-        .parent()
-        .addClass("input-active");
-    } else if (
-      $(this)
-        .parent()
-        .hasClass("input-active")
-    ) {
-      $(this)
-        .parent()
-        .removeClass("input-active");
-      $(this)
-        .parent()
-        .addClass("input-default");
-    }
-});
-
-$(".profile-check").change(function() {
-    if (
-      $(this)
-        .parent()
-        .hasClass("input-default")
-    ) {
-      $(this)
-        .parent()
-        .removeClass("input-default");
-      $(this)
-        .parent()
-        .addClass("input-active");
-    } else if (
-      $(this)
-        .parent()
-        .hasClass("input-active")
-    ) {
-      $(this)
-        .parent()
-        .removeClass("input-active");
-      $(this)
-        .parent()
-        .addClass("input-default");
-    }
-});
-
-//Timezone close function
+//Set up Timezone close function
 function closeTimeZones() {
     window.setTimeout(function() {
       $(".overlay").fadeOut();
@@ -359,6 +333,5 @@ function closeTimeZones() {
     }, 500);
 }
 
-//Message User Container
 
 
