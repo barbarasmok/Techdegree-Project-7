@@ -942,6 +942,21 @@ input:checked[type=checkbox]:before {
     color: white;
 }
 
+#messageSent {
+    background-color: #011533;
+    color:white;
+    font-size: 14px;
+    line-height: 1.5;
+    height: 75px;
+    display: none;
+}
+
+.saveAlertText {
+    width: 70%;
+    font-size: 12px;
+    float: left;
+    color: black;
+}
 
 
 /* STARTs Media Queries */

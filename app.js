@@ -17,8 +17,8 @@ const send = document.getElementById('send');
 const alert = document.getElementById('messageSent');
 const userList = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 
-let emailSetting = document.getElementById('email-check');
-let profileSetting = document.getElementById('profile-check');
+let emailSetting = document.getElementById('email-checkbox');
+let profileSetting = document.getElementById('profile-checkbox');
 let timezoneSetting = document.getElementById('timezone');
 
 const saveButton = document.getElementById('save');
@@ -281,8 +281,8 @@ send.addEventListener('click', (e) => {
 });
 
 alert.addEventListener('click', (e) => {
-     if(event.target.classList.contains('alert-banner-close')){
-         alert.innerHTML="";
+   if(event.target.classList.contains('alert-banner-close')){
+        alert.innerHTML="";
     }
 });
 
@@ -296,14 +296,14 @@ saveButton.addEventListener('click', (e) => {
     localStorage.setItem('email', isEmailChecked);
     localStorage.setItem('profile', isProfileSettingChecked);
     localStorage.setItem('timezone', timezoneSettingSelected);
-    settingsAlert.innerHTML='<div class="alertBanner"><p>Settings Saved!</p><p class="alert-banner-close">X</p></div>';
+    settingsAlert.innerHTML='<div class="alertBanner"><p class="saveAlertText">Settings Saved!</p><p class="alert-banner-close">X</p></div>';
 });
 
 cancelButton.addEventListener('click', (e) => {
     localStorage.setItem('email', false);
     localStorage.setItem('profile', false);
     localStorage.setItem('timezone', "00000");
-    settingsAlert.innerHTML='<div class="alertBanner"><p>Settings Reset.</p><p class="alert-banner-close">X</p></div>';
+    settingsAlert.innerHTML='<div class="alertBanner"><p class="saveAlertText">Settings Reset.</p><p class="alert-banner-close">X</p></div>';
 });
 
 settingsAlert.addEventListener('click', (e) => {
@@ -318,22 +318,23 @@ timezoneSetting.value = localStorage.getItem('timezone');
 
 
 // Set up Toogle Switches //
+const  checkedEmail= JSON.parse(localStorage.getItem("email-checkbox"));
 document.getElementById("email-checkbox").checked = checkedEmail;
 
 const checkedProfile = JSON.parse(localStorage.getItem("profile-checkbox"));
 document.getElementById("profile-checkbox").checked = checkedProfile;
 
 
-//Set up Timezone close function
-function closeTimeZones() {
-    window.setTimeout(function() {
-      $(".overlay").fadeOut();
-    }, 400);
-    $(".timezone-overlay-container").slideUp();
-    window.setTimeout(function() {
-      $(".grid-container").css("filter", "none");
-    }, 500);
-}
+// //Set up Timezone close function
+// function closeTimeZones() {
+//     window.setTimeout(function() {
+//       $(".overlay").fadeOut();
+//     }, 400);
+//     $(".timezone-overlay-container").slideUp();
+//     window.setTimeout(function() {
+//       $(".grid-container").css("filter", "none");
+//     }, 500);
+// }
 
 
 
