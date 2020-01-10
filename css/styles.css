@@ -957,7 +957,6 @@ input:checked[type=checkbox]:before {
     color: black;
 }
 
-
 /* STARTs Media Queries */
 @media (min-width: 768px) {
     .grid-container {
@@ -1387,6 +1386,7 @@ input:checked[type=checkbox]:before {
         width: 100%;
         text-align: center;
         background-color: #ECECEC;
+        height: 50px;
     }
 
     .messageHeadline {

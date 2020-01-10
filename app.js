@@ -307,7 +307,9 @@ cancelButton.addEventListener('click', (e) => {
 });
 
 settingsAlert.addEventListener('click', (e) => {
-    if(e.target.classList.contains('alert-banner-close-save' || 'alert-banner-close-cancel')){
+    if(e.target.classList.contains('alert-banner-close-save')){
+        settingsAlert.innerHTML="";
+    } else if (e.target.classList.contains ('alert-banner-close-cancel')) {
         settingsAlert.innerHTML="";
     }
 })
