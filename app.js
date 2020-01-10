@@ -307,7 +307,7 @@ cancelButton.addEventListener('click', (e) => {
 });
 
 settingsAlert.addEventListener('click', (e) => {
-    if(e.target.classList.contains('alert-banner-close')){
+    if(e.target.classList.contains('alert-banner-close-save' || 'alert-banner-close-cancel')){
         settingsAlert.innerHTML="";
     }
 })
@@ -323,18 +323,6 @@ document.getElementById("email-checkbox").checked = checkedEmail;
 
 const checkedProfile = JSON.parse(localStorage.getItem("profile-checkbox"));
 document.getElementById("profile-checkbox").checked = checkedProfile;
-
-
-// //Set up Timezone close function
-// function closeTimeZones() {
-//     window.setTimeout(function() {
-//       $(".overlay").fadeOut();
-//     }, 400);
-//     $(".timezone-overlay-container").slideUp();
-//     window.setTimeout(function() {
-//       $(".grid-container").css("filter", "none");
-//     }, 500);
-// }
 
 
 
