@@ -316,7 +316,7 @@ settingsAlert.addEventListener('click', (e) => {
 
 emailSetting.checked = JSON.parse(localStorage.getItem('email'));
 profileSetting.checked = JSON.parse(localStorage.getItem('profile'));
-timezoneSetting.value = localStorage.getItem('.timezoneStorage');
+//timezoneSetting.value = localStorage.getItem('.timezoneStorage');
 
 
 // Set up Toogle Switches //
