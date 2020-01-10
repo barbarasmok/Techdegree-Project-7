@@ -104,8 +104,8 @@ ul {
 
 .header .header-nav .notifications svg {
     display: block;
-    height: 24px;
-    width: 24px;
+    height: 34px;
+    width: 34px;
 }
 
 .header .header-nav .divider {
@@ -141,12 +141,52 @@ ul {
 }
 
 .notifications {
-    transition: transform 1s ease-in-out;
+    padding-right: 1em;
+    width: 40px;
+    height: 40px;
+    position: relative;
 }
 
-.notifications:hover {
-    transform: rotate(360deg);
+#notificationBell{
+    transition: transform 0.5s;
 }
+
+#notificationBell:hover {
+    /* transform: scale(1.2); */
+    transform: scale(1.2) rotate(-15deg);
+}
+
+/* .notifications:after {
+    content:"";
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background: rgb(46, 182, 46);
+    display:inline-block;
+    position: absolute;
+    left: 20px;
+} */
+
+#notifications {
+    background-color:#011533;
+    position: absolute;
+    top: 65px;
+    display: none;
+    margin-right: 180px;
+    color: white;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+.notificationText {
+    width: 70%;
+    margin-left: 8px;
+    font-size: 12px;
+    padding: 0;
+    float: left;
+}
+
 /* ENDs Main Header*/
 
 
@@ -1124,6 +1164,14 @@ input:checked[type=checkbox]:before {
     .send-btn {
         font-size: 18px;
     }
+
+    #notifications {
+        top: 65px;
+        right: 0;
+    }
+    .notificationAlert{
+        width: 300px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -1157,7 +1205,6 @@ input:checked[type=checkbox]:before {
         text-align: center;
     }
   
-
     nav {
         grid-column: 1/span 1;
         grid-row: 2/span 2;
@@ -1298,10 +1345,6 @@ input:checked[type=checkbox]:before {
     .member-4, .recent-4 {
         border-bottom: none;
     }
-    
-    /*.recent-4 {
-        width: 95%;
-    }*/
 
     #settings {
         grid-template-columns: repeat(2, 1fr);
