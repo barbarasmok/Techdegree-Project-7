@@ -1257,11 +1257,14 @@ input:checked[type=checkbox]:before {
         position: absolute;
         top: 65px;
         display: none;
-        margin-right: 500px;
         color: white;
         font-size: 12px;
         line-height: 1.5;
-        padding: 10px;
+        right: 25px;
+    }
+
+    .notificationAlert {
+        width: 600px;
     }
     
     .notificationText {
